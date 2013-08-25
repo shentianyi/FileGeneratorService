@@ -1,0 +1,16 @@
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\Tek4.TestProject.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\Tek4.TestProject.pdb
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\DocX.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\itextsharp.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\NPOI.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\NPOI.OOXML.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\Svg.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\Tek4.Highcharts.Exporting.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\Tek4.Highcharts.Exporting.pdb
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\obj\Debug\Tek4.TestProject.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\obj\Debug\Tek4.TestProject.pdb
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\bin\Debug\identicon.png

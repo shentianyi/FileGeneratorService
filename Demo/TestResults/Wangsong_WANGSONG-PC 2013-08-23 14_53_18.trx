@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="209f7e29-190d-4a9a-b9d3-9f23e0fe69c2" name="Wangsong@WANGSONG-PC 2013-08-23 14:53:18" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5abd8ffc-adb6-4483-8932-a30337f65674">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-08-23 14_53_18">
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\Svg.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXmlFormats.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\NPOI.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\DocX.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OOXML.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\bin\Debug\Tek4.Highcharts.Exporting.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXml4Net.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.Highcharts.Exporting\ThirdParty\itextsharp.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-23T14:53:18.0108000+08:00" queuing="2013-08-23T14:53:20.1718000+08:00" start="2013-08-23T14:53:20.3758000+08:00" finish="2013-08-23T14:53:24.9448000+08:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateDocTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\highcharts-export-module-asp.net\tek4.testproject\bin\debug\tek4.testproject.dll" id="eccb5519-5ec9-107b-1a35-643dac1caf95">
+      <Execution id="0e048971-6393-4de2-9cd3-5be5ef22aeaf" />
+      <TestMethod codeBase="C:/Users/Wangsong/Documents/Visual Studio 2010/Projects/Highcharts-export-module-asp.net/Tek4.TestProject/bin/Debug/Tek4.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tek4.TestProject.MSFileGeneratorTest, Tek4.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateDocTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="eccb5519-5ec9-107b-1a35-643dac1caf95" executionId="0e048971-6393-4de2-9cd3-5be5ef22aeaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0e048971-6393-4de2-9cd3-5be5ef22aeaf" testId="eccb5519-5ec9-107b-1a35-643dac1caf95" testName="CreateDocTest" computerName="WANGSONG-PC" duration="00:00:03.8974188" startTime="2013-08-23T14:53:20.4088000+08:00" endTime="2013-08-23T14:53:24.8418000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e048971-6393-4de2-9cd3-5be5ef22aeaf">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive 失败。无法验证不返回值的方法。</Message>
+          <StackTrace>   在 Tek4.TestProject.MSFileGeneratorTest.CreateDocTest() 位置 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\Highcharts-export-module-asp.net\Tek4.TestProject\MSFileGeneratorTest.cs:行号 75
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

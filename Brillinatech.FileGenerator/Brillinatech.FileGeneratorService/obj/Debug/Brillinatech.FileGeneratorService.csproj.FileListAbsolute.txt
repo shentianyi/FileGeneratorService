@@ -1,0 +1,6 @@
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\bin\Debug\Brillinatech.FileGeneratorService.dll.config
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\bin\Debug\Brillinatech.FileGeneratorService.dll
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\bin\Debug\Brillinatech.FileGeneratorService.pdb
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\obj\Debug\ResolveAssemblyReference.cache
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\obj\Debug\Brillinatech.FileGeneratorService.dll
+c:\users\wangsong\documents\visual studio 2010\Projects\Brillinatech.FileGenerator\Brillinatech.FileGeneratorService\obj\Debug\Brillinatech.FileGeneratorService.pdb

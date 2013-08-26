@@ -1,15 +1,18 @@
 ﻿var chart;
-var containers = ['container_1', 'container_2'];
+var containers = ['container_1', 'container_2', 'container_3'];
 $(document).ready(function() {
+	var charts = [];
 	for (var i = 0; i < containers.length; i++) {
-		console.log("#" + containers[i]);
-		$("#" + containers[i]).highcharts({
+		var chart = new Highcharts.Chart({
+			chart : {
+				renderTo : containers[i]
+			},
 			title : {
-				text : 'Monthly Average Temperature',
+				text : 'Monthly Average Temperature' + i,
 				x : -20 //center
 			},
 			subtitle : {
-				text : 'Source: WorldClimate.com',
+				text : 'Source: WorldClimate.com' + i,
 				x : -20
 			},
 			xAxis : {
@@ -42,21 +45,53 @@ $(document).ready(function() {
 				url : 'HighchartsExport.axd',
 				filename : 'MyChart',
 				width : 1200,
-				exportTypes : ['chart', 'png', 'jpeg', 'pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx']
+				exportTypes : ['chart', 'png', 'jpeg', 'pdf', 'svg', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx']
 			},
 			series : [{
-				name : 'Tokyo',
-				data : [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+				name : 'Tokyo' + i,
+				data : [17.0*(i+1), 6.9*(i+1), 9.5, 14.5*(i+1), 18.2*(i+1), 21.5*(i+1), 25.2*(i+1), 26.5, 23.3, 18.3, 13.9, 9.6]
 			}, {
-				name : 'New York',
-				data : [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+				name : 'New York' + i,
+				data : [-0.2, 0.8*(i+1), 5.7, 11.3*(i+1), 17.0*(i+1), 22.0, 24.8, 24.1, 20.1, 14.1, 8.6*(i+1), 2.5]
 			}, {
-				name : 'Berlin',
-				data : [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+				name : 'Berlin' + i,
+				data : [-0.9, 0.6*(i+1), 3.5*(i+1), 8.4, 13.5*(i+1), 17.0*(i+1), 18.6*(i+1), 17.9*(i+1), 14.3, 9.0, 3.9, 1.0]
 			}, {
-				name : 'London',
-				data : [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+				name : 'London' + i,
+				data : [3.9*(i+1), 4.2, 5.7, 8.5*(i+1), 11.9, 15.2, 17.0, 16.6*(i+1), 14.2*(i+1), 10.3, 6.6, 9.8*(i+1)]
 			}]
 		});
+		charts.push(chart);
 	}
-}); 
+	$("#exportPDFs_btn").click(function() {
+		Highcharts.exportCharts({
+			url : 'HighchartsExport.axd',
+			type : 'pdf',
+			charts : charts
+		});
+	});
+	$("#exportDOCs_btn").click(function() {
+		Highcharts.exportCharts({
+			url : 'HighchartsExport.axd',
+			type : 'doc',
+			width : 600,
+			charts : charts
+		});
+	});
+	$("#exportDOCXs_btn").click(function() {
+		Highcharts.exportCharts({
+			url : 'HighchartsExport.axd',
+			type : 'docx',
+			width : 600,
+			charts : charts
+		});
+	});
+		$("#exportXLSXs_btn").click(function() {
+		Highcharts.exportCharts({
+			url : 'HighchartsExport.axd',
+			type : 'xlsx',
+			width : 600,
+			charts : charts
+		});
+	});
+});

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tek4.Highcharts.Exporting", "Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj", "{42BDE168-C741-4339-92B6-0656E798E989}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Exporting_Demo_website", "Exporting_Demo_website", "{86EC93E8-8F9A-49D9-975E-6E39EDFD9960}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Exporting_Demo_website", "Exporting_Demo_website\", "{86EC93E8-8F9A-49D9-975E-6E39EDFD9960}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		ProjectReferences = "{42BDE168-C741-4339-92B6-0656E798E989}|Tek4.Highcharts.Exporting.dll;"
@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Exporting_Demo_website", "E
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "8461"
+		VWDPort = "51432"
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tek4.TestProject", "Tek4.TestProject\Tek4.TestProject.csproj", "{24A766E9-D0B3-4249-B44F-2744D883B1AD}"

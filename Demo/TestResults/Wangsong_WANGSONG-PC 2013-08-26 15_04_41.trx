@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="11d35f3f-f118-4308-bfcc-5d442065ad54" name="Wangsong@WANGSONG-PC 2013-08-26 15:04:41" runUser="Wangsong-PC\Wangsong" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5abd8ffc-adb6-4483-8932-a30337f65674">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="Wangsong_WANGSONG-PC 2013-08-26 15_04_41">
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\DocX.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OOXML.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXml4Net.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\itextsharp.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXmlFormats.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\Svg.dll" />
+      <DeploymentItem filename="C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\bin\Debug\Tek4.Highcharts.Exporting.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-26T15:04:41.9375000+08:00" queuing="2013-08-26T15:04:41.9485000+08:00" start="2013-08-26T15:04:41.9665000+08:00" finish="2013-08-26T15:04:42.3035000+08:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateDocStreamTest" storage="c:\users\wangsong\documents\visual studio 2010\projects\filegeneratorservice\demo\tek4.testproject\bin\debug\tek4.testproject.dll" id="d29c117a-4f6f-8cb9-31cf-b610e06f31a1">
+      <Execution id="a20dcba1-dd9c-47ee-9bd8-8f4cd0c2fbb6" />
+      <TestMethod codeBase="C:/Users/Wangsong/Documents/Visual Studio 2010/Projects/FileGeneratorService/Demo/Tek4.TestProject/bin/Debug/Tek4.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tek4.TestProject.MSFileGeneratorTest, Tek4.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateDocStreamTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d29c117a-4f6f-8cb9-31cf-b610e06f31a1" executionId="a20dcba1-dd9c-47ee-9bd8-8f4cd0c2fbb6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a20dcba1-dd9c-47ee-9bd8-8f4cd0c2fbb6" testId="d29c117a-4f6f-8cb9-31cf-b610e06f31a1" testName="CreateDocStreamTest" computerName="WANGSONG-PC" duration="00:00:00.0927226" startTime="2013-08-26T15:04:41.9775000+08:00" endTime="2013-08-26T15:04:42.2565000+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a20dcba1-dd9c-47ee-9bd8-8f4cd0c2fbb6">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual 失败。应为: &lt;(null)&gt;，实际为: &lt;System.IO.MemoryStream&gt;。</Message>
+          <StackTrace>   在 Tek4.TestProject.MSFileGeneratorTest.CreateDocStreamTest() 位置 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\MSFileGeneratorTest.cs:行号 92
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

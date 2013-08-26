@@ -72,9 +72,14 @@ rev. 2011-08-18 .NET 2.0
             <li>Works with .NET 3.5 Framework and above.</li>
         </ul>
     </div> 
-    <p>
-        Highcharts JS "Basic Line" example from Highcharts.com:</p>
+    <p>       Highcharts JS "Basic Line" example from Highcharts.com:
+     <input type="button" id="exportPDFs_btn" value="Export PDFs"/>
+     <input type="button" id="exportDOCs_btn" value="Export DOCs"/>
+     <input type="button" id="exportDOCXs_btn" value="Export DOCXs"/>
+          <input type="button" id="exportXLSXs_btn" value="Export XLSXs"/>
+     </p>
     <div id="container_1" style="width: 900px;" ></div>
     <div id="container_2" style="width: 900px;" ></div>
+     <div id="container_3" style="width: 900px;" ></div>
 </body>
 </html>

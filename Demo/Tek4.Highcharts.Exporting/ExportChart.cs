@@ -38,50 +38,55 @@ namespace Tek4.Highcharts.Exporting
 {
   using System;
   using System.Web;
+    using System.Text.RegularExpressions;
 
   /// <summary>
   /// Processes web requests to export Highcharts JS JavaScript charts.
   /// </summary>
-  internal static class ExportChart
-  {
-    /// <summary>
-    /// Processes HTTP Web requests to export SVG.
-    /// </summary>
-    /// <param name="context">An HttpContext object that provides references 
-    /// to the intrinsic server objects (for example, Request, Response, 
-    /// Session, and Server) used to service HTTP requests.</param>
-    internal static void ProcessExportRequest(HttpContext context)
+    internal static class ExportChart
     {
-      if (context != null &&
-        context.Request != null &&
-        context.Response != null &&
-        context.Request.HttpMethod == "POST")
-      {
-        HttpRequest request = context.Request;
-
-        // Get HTTP POST form variables, ensuring they are not null.
-        string filename = request.Form["filename"];
-        string type = request.Form["type"];
-        int width = 0;
-        string svg = request.Form["svg"];
-
-        if (filename != null &&
-          type != null &&
-          Int32.TryParse(request.Form["width"], out width) &&
-          svg != null)
+        /// <summary>
+        /// Processes HTTP Web requests to export SVG.
+        /// </summary>
+        /// <param name="context">An HttpContext object that provides references 
+        /// to the intrinsic server objects (for example, Request, Response, 
+        /// Session, and Server) used to service HTTP requests.</param>
+        internal static void ProcessExportRequest(HttpContext context)
         {
-          // Create a new chart export object using form variables.
-          Exporter export = new Exporter(filename, type, width, svg);
+            if (context != null &&
+              context.Request != null &&
+              context.Response != null &&
+              context.Request.HttpMethod == "POST")
+            {
+                HttpRequest request = context.Request;
 
-          // Write the exported chart to the HTTP Response object.
-          export.WriteToHttpResponse(context.Response);
+                // Get HTTP POST form variables, ensuring they are not null.
+                string filename = request.Form["filename"];
+                string type = request.Form["type"];
+                int width = 0;
+                string[] svgs = Regex.Split(request.Form["svg"], "</svg>,", RegexOptions.IgnoreCase);
+                if (svgs.Length > 1)
+                {
+                    for (int i = 0; i < svgs.Length - 1; i++)
+                        svgs[i] = string.Concat(svgs[i], "</svg>");
+                }
+                if (filename != null &&
+                  type != null &&
+                  Int32.TryParse(request.Form["width"], out width) &&
+                  request.Form["svg"] != null)
+                {
+                    // Create a new chart export object using form variables.
+                    Exporter export = new Exporter(filename, type, width, svgs);
 
-          // Short-circuit this ASP.NET request and end. Short-circuiting
-          // prevents other modules from adding/interfering with the output.
-          HttpContext.Current.ApplicationInstance.CompleteRequest();
-          context.Response.End();
+                    // Write the exported chart to the HTTP Response object.
+                    export.WriteToHttpResponse(context.Response);
+
+                    // Short-circuit this ASP.NET request and end. Short-circuiting
+                    // prevents other modules from adding/interfering with the output.
+                    HttpContext.Current.ApplicationInstance.CompleteRequest();
+                    context.Response.End();
+                }
+            }
         }
-      }   
     }
-  }
 }

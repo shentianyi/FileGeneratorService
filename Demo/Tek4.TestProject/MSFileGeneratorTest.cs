@@ -1,6 +1,9 @@
 ﻿using Tek4.Highcharts.Exporting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Svg;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Tek4.TestProject
 {
@@ -71,7 +74,28 @@ namespace Tek4.TestProject
         public void CreateDocTest()
         {
             MSFileGenerator target = new MSFileGenerator(); // TODO: 初始化为适当的值
-            target.CreateDoc();
+          
+            Assert.Inconclusive("无法验证不返回值的方法。");
+        }
+
+        /// <summary>
+        ///CreateDocStream 的测试
+        ///</summary>
+        [TestMethod()]
+        public void CreateDocStreamTest()
+        {  
+        }
+
+        /// <summary>
+        ///CreateExcelXStream 的测试
+        ///</summary>
+        [TestMethod()]
+        public void CreateExcelXStreamTest()
+        {
+            MSFileGenerator target = new MSFileGenerator(); // TODO: 初始化为适当的值
+            List<SvgDocument> svgDocs = null; // TODO: 初始化为适当的值
+            Stream stream = null; // TODO: 初始化为适当的值
+            target.CreateExcelXStream(svgDocs, stream);
             Assert.Inconclusive("无法验证不返回值的方法。");
         }
     }

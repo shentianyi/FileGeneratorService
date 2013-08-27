@@ -75,7 +75,8 @@ rev. 2011-08-18 .NET 2.0
     <p>       Highcharts JS "Basic Line" example from Highcharts.com:
      <input type="button" id="exportPDFs_btn" value="Export PDFs"/>
      <input type="button" id="exportDOCs_btn" value="Export DOCs"/>
-     <input type="button" id="exportDOCXs_btn" value="Export DOCXs"/>
+     <input type="button" id="exportDOCXs_btn" value="Export DOCXs"/>  
+             <input type="button" id="exportXLSs_btn" value="Export XLSs"/>
           <input type="button" id="exportXLSXs_btn" value="Export XLSXs"/>
      </p>
     <div id="container_1" style="width: 900px;" ></div>

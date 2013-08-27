@@ -98,5 +98,18 @@ namespace Tek4.TestProject
             target.CreateExcelXStream(svgDocs, stream);
             Assert.Inconclusive("无法验证不返回值的方法。");
         }
+
+        /// <summary>
+        ///CreateExcelStream 的测试
+        ///</summary>
+        [TestMethod()]
+        public void CreateExcelStreamTest()
+        {
+            MSFileGenerator target = new MSFileGenerator(); // TODO: 初始化为适当的值
+            List<SvgDocument> svgDocs = null; // TODO: 初始化为适当的值
+            Stream stream = null; // TODO: 初始化为适当的值
+            target.CreateExcelStream(svgDocs, stream);
+            Assert.Inconclusive("无法验证不返回值的方法。");
+        }
     }
 }

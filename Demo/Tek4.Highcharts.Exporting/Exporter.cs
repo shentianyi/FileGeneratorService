@@ -323,7 +323,7 @@ namespace Tek4.Highcharts.Exporting
 
                     break;
                 case "application/vnd.ms-excel":
-
+                    new MSFileGenerator().CreateExcelStream(CreateSvgDocuments(this.Svgs), outputStream);
                     break;
                 case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
                     new MSFileGenerator().CreateExcelXStream(CreateSvgDocuments(this.Svgs), outputStream);

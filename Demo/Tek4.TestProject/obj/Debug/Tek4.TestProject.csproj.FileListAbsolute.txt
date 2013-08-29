@@ -31,3 +31,5 @@ C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Dem
 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\NPOI.OOXML.dll
 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\NPOI.OpenXml4Net.dll
 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\EPPlus.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\EPPlus.xml

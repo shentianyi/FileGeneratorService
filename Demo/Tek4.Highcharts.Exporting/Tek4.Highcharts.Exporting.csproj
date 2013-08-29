@@ -59,6 +59,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ThirdParty\DocX.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>ThirdParty\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ThirdParty\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -98,8 +101,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ThirdParty\DocX.dll" />
+    <Content Include="ThirdParty\EPPlus.dll" />
+    <Content Include="ThirdParty\EPPlus.XML" />
     <Content Include="ThirdParty\ICSharpCode.SharpZipLib.dll" />
     <Content Include="ThirdParty\itextsharp.dll" />
+    <Content Include="ThirdParty\NPOI.dll" />
+    <Content Include="ThirdParty\NPOI.OOXML.dll" />
+    <Content Include="ThirdParty\NPOI.OpenXml4Net.dll" />
+    <Content Include="ThirdParty\NPOI.OpenXmlFormats.dll" />
+    <Content Include="ThirdParty\NPOI.XML" />
     <Content Include="ThirdParty\Svg.dll" />
     <Content Include="identicon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -124,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="tmp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThirdParty\NPOI.OpenXml4Net.dll.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

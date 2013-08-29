@@ -98,7 +98,7 @@ $(document).ready(function() {
 		Highcharts.exportCharts({
 			url : 'HighchartsExport.axd',
 			type : 'xlsx',
-			width : 600,
+			width : 1000,
 			charts : charts
 		});
 	});

@@ -204,7 +204,7 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
                            },
                            new P.NonVisualPictureDrawingProperties(
                              new D.PictureLocks() { NoChangeAspect = true }),
-                           new ApplicationNonVisualDrawingProperties()),
+                           new ApplicationNonVisualDrawingProperties()), 
                            new P.BlipFill(
                              new D.Blip() { Embed = imagePartRId },
                              new D.Stretch(
@@ -231,7 +231,7 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
         /// <returns></returns>
         private static SlideLayoutPart CreateSlideLayoutPart(SlidePart slidePart)
         {
-            SlideLayoutPart slideLayoutPart1 = slidePart.AddNewPart<SlideLayoutPart>(slideMasterRId);
+            SlideLayoutPart slideLayoutPart = slidePart.AddNewPart<SlideLayoutPart>(slideMasterRId);
             SlideLayout slideLayout = new SlideLayout(
             new CommonSlideData(new ShapeTree(
               new P.NonVisualGroupShapeProperties(
@@ -250,8 +250,8 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
                 new ListStyle(),
                 new Paragraph(new EndParagraphRunProperties()))))),
             new ColorMapOverride(new MasterColorMapping()));
-            slideLayoutPart1.SlideLayout = slideLayout;
-            return slideLayoutPart1;
+            slideLayoutPart.SlideLayout = slideLayout;
+            return slideLayoutPart;
         }
 
         /// <summary>

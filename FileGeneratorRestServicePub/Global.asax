@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Brilliantech.FileGenerator.RestApp.Global" Language="C#" %>

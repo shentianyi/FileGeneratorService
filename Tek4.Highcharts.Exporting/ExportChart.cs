@@ -43,7 +43,7 @@ namespace Tek4.Highcharts.Exporting
   /// <summary>
   /// Processes web requests to export Highcharts JS JavaScript charts.
   /// </summary>
-    internal static class ExportChart
+    public static class ExportChart
     {
         /// <summary>
         /// Processes HTTP Web requests to export SVG.
@@ -51,7 +51,7 @@ namespace Tek4.Highcharts.Exporting
         /// <param name="context">An HttpContext object that provides references 
         /// to the intrinsic server objects (for example, Request, Response, 
         /// Session, and Server) used to service HTTP requests.</param>
-        internal static void ProcessExportRequest(HttpContext context)
+        public static void ProcessExportRequest(HttpContext context)
         {
             if (context != null &&
               context.Request != null &&

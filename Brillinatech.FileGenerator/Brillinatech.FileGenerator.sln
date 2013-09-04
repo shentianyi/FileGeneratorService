@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brillinatech.FileGeneratorService", "Brillinatech.FileGeneratorService\Brillinatech.FileGeneratorService.csproj", "{326E9DA4-CE48-4AFF-9091-1A5CB4DE445F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tek4.Highcharts.Exporting", "Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj", "{42BDE168-C741-4339-92B6-0656E798E989}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tek4.Highcharts.Exporting", "..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj", "{42BDE168-C741-4339-92B6-0656E798E989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

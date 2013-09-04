@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="39a00e09-1bde-416a-8d94-a5d64a4f8816" name="luna@LUNA-PC 2013-08-30 03:45:59" runUser="luna-PC\luna" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="5abd8ffc-adb6-4483-8932-a30337f65674">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment enabled="false" runDeploymentRoot="luna_LUNA-PC 2013-08-30 03_45_59">
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXmlFormats.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\EPPlus.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OpenXml4Net.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\Svg.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\NPOI.OOXML.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\DocX.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\bin\Debug\Tek4.Highcharts.Exporting.dll" />
+      <DeploymentItem filename="C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.Highcharts.Exporting\ThirdParty\itextsharp.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-30T03:45:59.2258558+08:00" queuing="2013-08-30T03:45:59.2358564+08:00" start="2013-08-30T03:45:59.2808590+08:00" finish="2013-08-30T03:45:59.7068833+08:00" />
+  <ResultSummary outcome="Inconclusive">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="1" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreatePowerPointXStreamTest" storage="c:\users\luna\documents\visual studio 2010\projects\filegeneratorservice\demo\tek4.testproject\bin\debug\tek4.testproject.dll" id="7924c09d-0fb2-811a-eb37-3fbf3d392360">
+      <Execution id="f54a02a4-6b93-4daf-abe8-5b1d520ba510" />
+      <TestMethod codeBase="C:/Users/luna/Documents/Visual Studio 2010/Projects/FileGeneratorService/Demo/Tek4.TestProject/bin/Debug/Tek4.TestProject.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Tek4.TestProject.MSFileGeneratorTest, Tek4.TestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreatePowerPointXStreamTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="7924c09d-0fb2-811a-eb37-3fbf3d392360" executionId="f54a02a4-6b93-4daf-abe8-5b1d520ba510" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f54a02a4-6b93-4daf-abe8-5b1d520ba510" testId="7924c09d-0fb2-811a-eb37-3fbf3d392360" testName="CreatePowerPointXStreamTest" computerName="LUNA-PC" duration="00:00:00.0809520" startTime="2013-08-30T03:45:59.2948598+08:00" endTime="2013-08-30T03:45:59.6828819+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f54a02a4-6b93-4daf-abe8-5b1d520ba510">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive 失败。无法验证不返回值的方法。</Message>
+          <StackTrace>   在 Tek4.TestProject.MSFileGeneratorTest.CreatePowerPointXStreamTest() 位置 C:\Users\luna\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\MSFileGeneratorTest.cs:行号 125
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

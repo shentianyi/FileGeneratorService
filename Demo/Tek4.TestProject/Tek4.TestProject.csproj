@@ -33,9 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="DocX">
       <HintPath>..\Tek4.Highcharts.Exporting\ThirdParty\DocX.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=3.1.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL" />
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\Tek4.Highcharts.Exporting\ThirdParty\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -69,6 +71,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -76,11 +79,13 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MSFileGeneratorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
+    <Shadow Include="测试引用\Tek4.Highcharts.Exporting.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
       <Project>{42BDE168-C741-4339-92B6-0656E798E989}</Project>
       <Name>Tek4.Highcharts.Exporting</Name>
     </ProjectReference>

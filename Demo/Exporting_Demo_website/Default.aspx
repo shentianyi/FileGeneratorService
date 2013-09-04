@@ -78,6 +78,7 @@ rev. 2011-08-18 .NET 2.0
      <input type="button" id="exportDOCXs_btn" value="Export DOCXs"/>  
              <input type="button" id="exportXLSs_btn" value="Export XLSs"/>
           <input type="button" id="exportXLSXs_btn" value="Export XLSXs"/>
+           <input type="button" id="exportPPTXs_btn" value="Export PPTXs"/>
      </p>
     <div id="container_1" style="width: 900px;" ></div>
     <div id="container_2" style="width: 900px;" ></div>

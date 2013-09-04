@@ -4,28 +4,18 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.IO;
+using System.ServiceModel.Web;
 
 namespace Brillinatech.FileGeneratorService
 {
     // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的类名“Service1”。
     public class HighChartService : IHighChartService
     {
-        public string GetData(int value)
+        public Stream GenerateHighChartsFile()
         {
-            return string.Format("You entered: {0}", value);
-        }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+           WebOperationContext context= WebOperationContext.Current;
+           return null;
         }
     }
 }

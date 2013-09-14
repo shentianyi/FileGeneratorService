@@ -63,12 +63,19 @@ namespace Tek4.Highcharts.Exporting
                 // Get HTTP POST form variables, ensuring they are not null.
                 string filename = request.Form["filename"];
                 string type = request.Form["type"];
+                bool muti = (int.Parse( request.Form["muti"])==1);
                 int width = 0;
-                string[] svgs = Regex.Split(request.Form["svg"], "</svg>,", RegexOptions.IgnoreCase);
-                if (svgs.Length > 1)
+                
+                string[] svgs =null;
+                if (muti)
                 {
+                    svgs = Regex.Split(request.Form["svg"], "</svg>,", RegexOptions.IgnoreCase);
                     for (int i = 0; i < svgs.Length - 1; i++)
                         svgs[i] = string.Concat(svgs[i], "</svg>");
+                }
+                else
+                {
+                    svgs = new string[1] { request.Form["svg"] };
                 }
                 if (filename != null &&
                   type != null &&

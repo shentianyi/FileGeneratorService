@@ -1,12 +1,14 @@
 ﻿var chart;
 var containers = ['container_1', 'container_2', 'container_3'];
 //'HighchartsExport.axd'
-var url = 'http://42.121.111.38:9002/HighChartsFileService/';
+//var url = 'http://42.121.111.38:9002/HighChartsFileService/';
+var url = 'HighchartsExport.axd';
 
 $(document).ready(function() {
-	var charts = [];  // charts array 
-	
-	// generate 3 different charts 
+	var charts = [];
+	// charts array
+
+	// generate 3 different charts
 	for (var i = 0; i < containers.length; i++) {
 		var chart = new Highcharts.Chart({
 			chart : {
@@ -54,7 +56,7 @@ $(document).ready(function() {
 				exportTypes : ['chart', 'png', 'jpeg', 'pdf', 'svg', 'doc', 'docx', 'pptx', 'xls', 'xlsx'] // set download file type
 			},
 			series : [{
-				name : 'Tokyo' + i,
+				name : 'Tokyo' + i, 
 				data : [17.0 * (i + 1), 6.9 * (i + 1), 9.5, 14.5 * (i + 1), 18.2 * (i + 1), 21.5 * (i + 1), 25.2 * (i + 1), 26.5, 23.3, 18.3, 13.9, 9.6]
 			}, {
 				name : 'New York' + i,
@@ -72,6 +74,7 @@ $(document).ready(function() {
 
 	// download all charts as pdf
 	$("#exportPDFs_btn").click(function() {
+		// console.log(charts[0].series);
 		Highcharts.exportCharts({
 			url : url,
 			type : 'pdf',

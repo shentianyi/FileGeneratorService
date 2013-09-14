@@ -87,6 +87,37 @@
 						buttons.contextButton.menuItems.push(defaultExportButtons[exportingOptions.exportTypes[i]]);
 					}
 				}
+			},
+			exportChart : function(options, chartOptions) {
+				options = options || {};
+
+				var chart = this, chartExportingOptions = chart.options.exporting, svg = chart.getSVG(Highcharts.merge({
+					chart : {
+						borderRadius : 0
+					}
+				}, chartExportingOptions.chartOptions, chartOptions, {
+					exporting : {
+						sourceWidth : options.sourceWidth || chartExportingOptions.sourceWidth,
+						sourceHeight : options.sourceHeight || chartExportingOptions.sourceHeight
+					}
+				}));
+
+				// merge the options
+				options = Highcharts.merge(chart.options.exporting, options);
+  console.log(chart.series);
+//var data=chart.generateData();
+				// do the post
+				Highcharts.post(options.url, {
+					filename : options.filename || 'chart',
+					type : options.type,
+					width : options.width || 0, // IE8 fails to post undefined correctly, so use 0
+					scale : options.scale || 2,
+					svg : svg,
+					muti:0
+				});
+			},
+			generateData:function(){
+				
 			}
 		});
 		Highcharts.exportCharts = function(options, chartOptions) {
@@ -117,7 +148,8 @@
 				type : defaultExportButtonsData[options.type].type,
 				width : options.width || 0, // IE8 fails to post undefined correctly, so use 0
 				scale : options.scale || 2,
-				svg : svgs
+				svg : svgs,
+				muti:1
 			});
 		};
 		Chart.prototype.callbacks.unshift(function(chart) {

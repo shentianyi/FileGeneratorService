@@ -52,6 +52,7 @@
 				type : 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 			}
 		};
+		var exportTableFileTypes = ["xls", "xslx"];
 		var defaultExportButtons = {
 			'chart' : {
 				textKey : 'printChart',
@@ -65,7 +66,7 @@
 				textKey : value.textKey,
 				onclick : function() {
 					this.exportChart({
-						type : value.type
+						type : key
 					});
 				}
 			};
@@ -104,20 +105,44 @@
 
 				// merge the options
 				options = Highcharts.merge(chart.options.exporting, options);
-  console.log(chart.series);
-//var data=chart.generateData();
+				console.log(chart.series);
+				console.log(chart.xAxis.labels);
+				console.log(chart.xAxis.categories);
+				var table = null;
+				// if (exportTableFileTypes.indexOf(options.type) != -1) {
+					// table = chart.generateTableData();
+				// }
 				// do the post
 				Highcharts.post(options.url, {
 					filename : options.filename || 'chart',
-					type : options.type,
+					type : defaultExportButtonsData[options.type].type,
 					width : options.width || 0, // IE8 fails to post undefined correctly, so use 0
 					scale : options.scale || 2,
 					svg : svg,
-					muti:0
+					muti : 0,
+					tabled : exportTableFileTypes.indexOf(options.type) != -1,
+					table : table
 				});
 			},
-			generateData:function(){
-				
+			generateTableData : function() {
+				var table = {
+					xAxisIndex : [],
+					xAxis : []
+				};
+				for (var i = 0; i < this.series.length; i++) {
+					var data = this.series[i].data;
+					for (var j = 0; j < data.length; j++) {
+						if ($.inArray(data[j].x) == -1) {
+							var xItem = {
+								x : data[j].x,
+								name : data[j].name
+							}
+							table.xAxisIndex.push(data[j].x);
+							table.xAxis.push(xItem);
+						}
+					}
+				}
+				return table;
 			}
 		});
 		Highcharts.exportCharts = function(options, chartOptions) {
@@ -149,7 +174,7 @@
 				width : options.width || 0, // IE8 fails to post undefined correctly, so use 0
 				scale : options.scale || 2,
 				svg : svgs,
-				muti:1
+				muti : 1
 			});
 		};
 		Chart.prototype.callbacks.unshift(function(chart) {

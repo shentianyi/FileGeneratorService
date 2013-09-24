@@ -52,7 +52,7 @@
                     type : 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
                }
           };
-          var exportTableFileTypes = ["xls", "xslx"];
+          var exportTableFileTypes = ["xls", "xlsx"];
           var defaultExportButtons = {
                'chart' : {
                     textKey : 'printChart',
@@ -123,7 +123,7 @@
                          svg : svg,
                          muti : 0,
                          tabled : exportTableFileTypes.indexOf(options.type) != -1,
-                         table : table
+                         table : JSON.stringify(table)
                     });
                },
                generateTableData : function() {
@@ -194,7 +194,8 @@
                     width : options.width || 0, // IE8 fails to post undefined correctly, so use 0
                     scale : options.scale || 2,
                     svg : svgs,
-                    muti : 1
+                    muti : 1,
+                    tabled:false
                });
           };
           Chart.prototype.callbacks.unshift(function(chart) {

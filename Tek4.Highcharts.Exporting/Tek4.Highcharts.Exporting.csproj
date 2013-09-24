@@ -71,6 +71,10 @@
       <HintPath>ThirdParty\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.1.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ThirdParty\NPOI.dll</HintPath>
@@ -98,6 +102,7 @@
     <Compile Include="ExportChart.cs" />
     <Compile Include="Exporter.cs" />
     <Compile Include="HttpHandler.cs" />
+    <Compile Include="Model\FileTable.cs" />
     <Compile Include="MSDocumentGenerator\ExcelGenerator.cs" />
     <Compile Include="MSDocumentGenerator\PowerPointGenerator.cs" />
     <Compile Include="MSDocumentGenerator\WordGenerator.cs" />
@@ -105,6 +110,7 @@
     <Compile Include="Page.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Util\Json.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ThirdParty\DocumentFormat.OpenXml.dll" />
@@ -113,6 +119,9 @@
     <Content Include="ThirdParty\EPPlus.XML" />
     <Content Include="ThirdParty\ICSharpCode.SharpZipLib.dll" />
     <Content Include="ThirdParty\itextsharp.dll" />
+    <Content Include="ThirdParty\Newtonsoft.Json.dll" />
+    <Content Include="ThirdParty\Newtonsoft.Json.pdb" />
+    <Content Include="ThirdParty\Newtonsoft.Json.xml" />
     <Content Include="ThirdParty\NPOI.dll" />
     <Content Include="ThirdParty\NPOI.OOXML.dll" />
     <Content Include="ThirdParty\NPOI.OpenXml4Net.dll" />
@@ -137,9 +146,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="tmp\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="ThirdParty\NPOI.OpenXml4Net.dll.config" />
   </ItemGroup>

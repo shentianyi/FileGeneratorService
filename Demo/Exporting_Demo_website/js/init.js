@@ -2,7 +2,7 @@
 var containers = ['container_1', 'container_2', 'container_3'];
 //'HighchartsExport.axd'
 var url = 'http://42.121.111.38:9002/HighChartsFileService/';
-// var url = 'HighchartsExport.axd';
+//var url = 'HighchartsExport.axd';
 
 $(document).ready(function() {
      var charts = [];
@@ -16,7 +16,7 @@ $(document).ready(function() {
                for(var n = 0; n < 12; n++) {
                     data[m].push({
                          name : "D-" + m + "-" + n,
-                         y : Math.random()*100
+                         y : Math.random()*100 
                     });
                }
           }

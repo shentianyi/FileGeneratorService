@@ -14,7 +14,7 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
        /// create doc or docx 
        /// using DOCX: Novacode
        /// </summary>
-       public static void CreateDocStreamBySvg(List<SvgDocument> svgDocs, Stream stream)
+       public static void CreateDocStreamBySvgs(List<SvgDocument> svgDocs, Stream stream)
        {
            using (stream)
            {

@@ -55,3 +55,6 @@ C:\Users\Charlot\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo
 C:\Users\Charlot\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\obj\Debug\Tek4.TestProject.pdb
 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\Tek4.Highcharts.Exporting_Accessor.dll
 C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\Tek4.Highcharts.Exporting_Accessor.pdb
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Wangsong\Documents\Visual Studio 2010\Projects\FileGeneratorService\Demo\Tek4.TestProject\bin\Debug\Newtonsoft.Json.xml

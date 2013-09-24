@@ -28,7 +28,7 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
         /// </summary>
         /// <param name="svgDocs"></param>
         /// <param name="stream"></param>
-        public static void CreatePowerPointStream(List<SvgDocument> svgDocs, Stream stream)
+        public static void CreatePowerPointStreamBySvgs(List<SvgDocument> svgDocs, Stream stream)
         {
             throw new Exception("not complete");
         }
@@ -39,7 +39,7 @@ namespace Tek4.Highcharts.Exporting.MSDocumentGenerator
         /// </summary>
         /// <param name="svgDocs"></param>
         /// <param name="stream"></param>
-        public static void CreatePowerPointXStream(List<SvgDocument> svgDocs, Stream stream)
+        public static void CreatePowerPointXStreamBySvgs(List<SvgDocument> svgDocs, Stream stream)
         {
             using (MemoryStream ms = new MemoryStream())
             {

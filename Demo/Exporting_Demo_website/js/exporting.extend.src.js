@@ -52,7 +52,8 @@
                     type : 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
                }
           };
-          var exportTableFileTypes = ["xls", "xlsx"];
+          var exportTableFileTypes = ['xls', 'xlsx'];
+          var exportTableChartTypes = ['line', 'column', 'scatter'];
           var defaultExportButtons = {
                'chart' : {
                     textKey : 'printChart',
@@ -110,7 +111,16 @@
                     //console.log(chart.xAxis.categories);
 
                     var table = null;
-                    table = chart.generateTableData();
+                    console.log(chart.options.chart);
+                    console.log(chart.options.chart.type);
+                    console.log(chart.series);
+                    //         console.log(chart.series[chart.series.length-1]);
+                    //       console.log(chart.series[chart.series.length-1].type);
+                    var table = null;
+                    var tabled = exportTableFileTypes.indexOf(options.type) != -1 && exportTableChartTypes.indexOf(chart.series[chart.series.length - 1].type) != -1;
+
+                    if(tabled)
+                         table = chart.generateTableData();
                     // if (exportTableFileTypes.indexOf(options.type) != -1) {
                     // table = chart.generateTableData();
                     // }
@@ -122,8 +132,8 @@
                          scale : options.scale || 2,
                          svg : svg,
                          muti : 0,
-                         tabled : exportTableFileTypes.indexOf(options.type) != -1,
-                         table : JSON.stringify(table)
+                         tabled : tabled,
+                         table : tabled ? JSON.stringify(table) : null
                     });
                },
                generateTableData : function() {
@@ -157,11 +167,12 @@
                          var data = this.series[i].data;
                          for(var j = 0; j < data.length; j++) {
                               if(data[j].x in table.rows[i]) {
-                                   table.rows[i][data[j].x]=data[j].y
+                                   table.rows[i][data[j].x] = data[j].y
                               }
                          }
                     }
-                    console.log(table);
+                    console.log(this.options);
+                    // console.log(table);
                     return table;
                }
           });
@@ -195,7 +206,7 @@
                     scale : options.scale || 2,
                     svg : svgs,
                     muti : 1,
-                    tabled:false
+                    tabled : false
                });
           };
           Chart.prototype.callbacks.unshift(function(chart) {

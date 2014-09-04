@@ -66,20 +66,22 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DHXFileService.cs" />
     <Compile Include="HighChartsFileService.cs" />
     <Compile Include="SampleItem.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
-      <Project>{42BDE168-C741-4339-92B6-0656E798E989}</Project>
-      <Name>Tek4.Highcharts.Exporting</Name>
+    <ProjectReference Include="..\DHX.Excel.Exporting\DHX.Excel.Exporting.csproj">
+      <Project>{1A1D649F-B9C0-4415-925A-C9B33F9A150B}</Project>
+      <Name>DHX.Excel.Exporting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

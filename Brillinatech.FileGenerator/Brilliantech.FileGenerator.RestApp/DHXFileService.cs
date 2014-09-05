@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using DHX.Excel.Exporting;
+using DHX.PDF.Exporting;
 
 namespace Brilliantech.FileGenerator.RestApp
 {
@@ -20,5 +21,12 @@ namespace Brilliantech.FileGenerator.RestApp
         {
             ExportExcel.ProcessExportRequest(HttpContext.Current);
         }
+
+        [WebInvoke(Method = "POST", UriTemplate = "PDF")]
+        public void GeneratePDF()
+        {
+            ExportPDF.ProcessExportRequest(HttpContext.Current);
+        }
+
     }
 }

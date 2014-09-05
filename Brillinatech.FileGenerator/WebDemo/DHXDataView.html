@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>DataView</title>
+		<link rel="stylesheet" href="dhtmlx.css" type="text/css" />
+		<script src="js/dhtmlx.js" type="text/javascript"></script>
+		<script src="js/dhtmlxgrid_deprecated.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="data_container" style="border:1px solid #A4BED4; background-color:white;width:596px;height:396px;">
+			I
+		</div>
+		<button onclick="getxml()">GetXML</button>
+		<script type="text/javascript">
+			view = new dhtmlXDataView({
+				container : "data_container",
+				type : {
+					template : "#Package# : #Version#<br/>#Maintainer#",
+					height : 40
+				}
+			});
+			  view.load("common/data.xml");
+function getxml(){
+	console.log(view.serialize());	
+	 
+}
+// view.add({
+    // Package:"test one",
+    // Version:"0.1",
+    // Maintainer:"dhtmlx" 
+// });
+// view.setSerializationLevel(true,true);
+		// var myXmlStr = view.serialize()
+			// console.log(view.get(1));
+		</script>
+	</body>
+</html>

@@ -3,7 +3,7 @@
 	<head>
 		<title>DHX Grid</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" href="dhtmlxgrid.css" type="text/css" />
+		<link rel="stylesheet" href="dhtmlx.css" type="text/css" />
 		<script src="js/dhtmlx.js" type="text/javascript"></script>
 		<script src="js/dhtmlxgrid_deprecated.js" type="text/javascript"></script>
 
@@ -13,14 +13,17 @@
 		<p>
 			Configuration of grid can be loaded from XML file. You need only 2-3 script commands to get the grid up and running.
 		</p>
+		<input type="button" value="Get as EXCEL"
+		onclick="mygrid.toExcel('http://localhost:6023/DHXFileService/Excel');"/>
 		<input type="button" value="Get as PDF"
-		onclick="mygrid.toPDF('codebase/grid-pdf-php/generate.php');">
+		onclick="mygrid.toPDF('http://localhost:6023/DHXFileService/PDF');"/>
+		
 		<div id="gridbox" style="width:850px; height:370px; background-color:white;">
 			I
 		</div>
 
 		<a href='#alfa' onclick="if(mygrid.setSerializationLevel){ser();} else {alert('Available in Pro Edition only')}">Serialize grid</a>
-
+<button onclick="getxml()">GetXML</button>
 		<script>
 			mygrid = new dhtmlXGridObject('gridbox');
 			mygrid.setImagePath("imgs/");
@@ -31,6 +34,11 @@
 				mygrid.setSerializationLevel(false, false, true);
 				document.getElementById("alfa1").innerHTML = mygrid.serialize().replace(/\</g, "&lt;").replace(/\>/g, "&gt;").replace(/\&lt;row/g, "<br/>&lt;row");
 			}
+			
+			function getxml(){
+	console.log(mygrid.serialize());	
+	 
+}
 		</script>
 
 		<a name="alfa">

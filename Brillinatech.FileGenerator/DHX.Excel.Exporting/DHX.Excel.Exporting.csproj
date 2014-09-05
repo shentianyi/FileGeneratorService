@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DHTMLX.Export.Excel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ThridPart\DHTMLX.Export.Excel.dll</HintPath>
-    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>ThridPart\DocumentFormat.OpenXml.dll</HintPath>
@@ -62,6 +58,12 @@
     <Content Include="ThridPart\DHTMLX.Export.Excel.dll" />
     <Content Include="ThridPart\DocumentFormat.OpenXml.dll" />
     <Content Include="ThridPart\OpenExcel.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DHTMLX.Export.Excel\DHTMLX.Export.Excel.csproj">
+      <Project>{98502C30-7BF1-4CE6-9F69-F1F5EF9224FE}</Project>
+      <Name>DHTMLX.Export.Excel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -79,9 +79,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
+      <Project>{42BDE168-C741-4339-92B6-0656E798E989}</Project>
+      <Name>Tek4.Highcharts.Exporting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DHX.Excel.Exporting\DHX.Excel.Exporting.csproj">
       <Project>{1A1D649F-B9C0-4415-925A-C9B33F9A150B}</Project>
       <Name>DHX.Excel.Exporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DHX.PDF.Exporting\DHX.PDF.Exporting.csproj">
+      <Project>{A922EADB-6B56-4384-85E0-545E600152B9}</Project>
+      <Name>DHX.PDF.Exporting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

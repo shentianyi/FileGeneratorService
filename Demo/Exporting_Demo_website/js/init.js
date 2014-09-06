@@ -1,8 +1,8 @@
 ﻿var chart;
 var containers = ['container_1', 'container_2', 'container_3'];
 //'HighchartsExport.axd'
-//var url = 'http://42.121.111.38:9002/HighChartsFileService/';
-var url = 'HighchartsExport.axd';
+var url = 'http://192.168.0.253:9002/HighChartsFileService/';
+//var url = 'HighchartsExport.axd';
 
 $(document).ready(function() {
 	var charts = [];

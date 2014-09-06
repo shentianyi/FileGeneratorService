@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -64,12 +66,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DHXFileService.cs" />
     <Compile Include="HighChartsFileService.cs" />
     <Compile Include="SampleItem.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -78,6 +82,14 @@
     <ProjectReference Include="..\..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
       <Project>{42BDE168-C741-4339-92B6-0656E798E989}</Project>
       <Name>Tek4.Highcharts.Exporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DHX.Excel.Exporting\DHX.Excel.Exporting.csproj">
+      <Project>{1A1D649F-B9C0-4415-925A-C9B33F9A150B}</Project>
+      <Name>DHX.Excel.Exporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DHX.PDF.Exporting\DHX.PDF.Exporting.csproj">
+      <Project>{A922EADB-6B56-4384-85E0-545E600152B9}</Project>
+      <Name>DHX.PDF.Exporting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

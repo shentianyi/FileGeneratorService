@@ -17,7 +17,7 @@ namespace Brilliantech.FileGenerator.RestApp
     public class HighChartsFileService
     {
         [WebInvoke(Method = "POST", UriTemplate = "")]
-        public void GetCollection()
+        public void Generate()
         {
             ExportChart.ProcessExportRequest(HttpContext.Current);
         }

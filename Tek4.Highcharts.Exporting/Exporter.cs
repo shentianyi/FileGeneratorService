@@ -48,6 +48,8 @@ namespace Tek4.Highcharts.Exporting
     using Svg.Transforms;
     using System.Collections.Generic;
     using Tek4.Highcharts.Exporting.MSDocumentGenerator;
+    using Tek4.Highcharts.Exporting.Model;
+    using Tek4.Highcharts.Exporting.Util;
 
     /// <summary>
     /// .NET chart exporting class for Highcharts JS JavaScript charts.
@@ -92,12 +94,20 @@ namespace Tek4.Highcharts.Exporting
         /// </summary>
         public string Svg { get; private set; }
 
+        /// <summary>
+        /// Gets the SVG chart docuemnts(XML text).
+        /// </summary>
         public string[] Svgs { get; private set; }
 
         /// <summary>
         /// Gets the pixel width of the exported chart image.
         /// </summary>
         public int Width { get; private set; }
+         
+        /// <summary>
+        /// Gets the points of the chart series.
+        /// </summary>
+        public FileTable Table { get; private set; }
 
         /// <summary>
         /// Initializes a new chart Export object using the specified file name, 
@@ -109,68 +119,24 @@ namespace Tek4.Highcharts.Exporting
         /// 'image/jpeg', 'image/png', 'application/pdf' or 'image/svg+xml'.</param>
         /// <param name="width">The pixel width of the exported chart image.</param>
         /// <param name="svg">An SVG chart document to export (XML text).</param>
-        internal Exporter(
-          string fileName,
-          string type,
-          int width,
-          string[] svgs)
+        internal Exporter(string fileName,string type,int width,string[] svgs)
         {
-            string extension;
-
             this.ContentType = type.ToLower();
             this.Name = fileName;
             this.Svgs = svgs;
             this.Svg = svgs[0];
-            this.Width = width;
-
-            // Validate requested MIME type.
-            switch (ContentType)
-            {
-                case "image/jpeg":
-                    extension = "jpg";
-                    break;
-                case "image/png":
-                    extension = "png";
-                    break;
-                case "application/pdf":
-                    extension = "pdf";
-                    break;
-                case "image/svg+xml":
-                    extension = "svg";
-                    break;
-                case "application/msword":
-                    extension = "doc";
-                    break;
-                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                    extension = "docx";
-                    break;
-                //case "application/vnd.ms-powerpoint":
-                //    extension = "ppt";
-                //    break;
-                case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
-                    extension = "pptx";
-                    break;
-                case "application/vnd.ms-excel":
-                    extension = "xls";
-                    break;
-                case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-                    extension = "xlsx";
-                    break;
-                // Unknown type specified. Throw exception.
-                default:
-                    throw new ArgumentException(
-                      string.Format("Invalid type specified: '{0}'.", type));
-            }
-
+            this.Width = width; 
+          
             // Determine output file name.
-            this.FileName = string.Format(
-              "{0}.{1}",
-              string.IsNullOrEmpty(fileName) ? DefaultFileName : fileName,
-              extension);
+            this.FileName = string.Format("{0}.{1}",string.IsNullOrEmpty(fileName) ? DefaultFileName : fileName,GetExtension(this.ContentType));
 
             // Create HTTP Content-Disposition header.
             this.ContentDisposition =
-              string.Format("attachment; filename={0}", this.FileName);
+              string.Format("attachment; filename={0}", this.FileName);           
+        }
+
+        internal Exporter(string fileName, string type, int width, string[] svgs, string tableString):this(fileName,type,width,svgs) {
+            this.Table = Json.Parse<FileTable>(tableString);
         }
 
         /// <summary>
@@ -315,19 +281,26 @@ namespace Tek4.Highcharts.Exporting
                     break;
                 case "application/msword":
                 case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                    WordGenerator.CreateDocStreamBySvg(CreateSvgDocuments(this.Svgs), outputStream);
+                    WordGenerator.CreateDocStreamBySvgs(CreateSvgDocuments(this.Svgs), outputStream);
                     break;
                 //case "application/vnd.ms-powerpoint":
 
                 //    break;
                 case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
-                    PowerPointGenerator.CreatePowerPointXStream(CreateSvgDocuments(this.Svgs), outputStream);
+                    PowerPointGenerator.CreatePowerPointXStreamBySvgs(CreateSvgDocuments(this.Svgs), outputStream);
                     break;
                 case "application/vnd.ms-excel":
-                    ExcelGenerator.CreateExcelStreamBySvg(CreateSvgDocuments(this.Svgs), outputStream);
+                    if (this.Table == null)
+                        ExcelGenerator.CreateExcelStreamBySvgs(CreateSvgDocuments(this.Svgs), outputStream);
+                    else
+                        ExcelGenerator.CreateExcelWithTableStreamBySvg(CreateSvgDocument(this.Svg), outputStream, this.Table);
                     break;
                 case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-                    ExcelGenerator.CreateExcelXStreamBySvg(CreateSvgDocuments(this.Svgs), outputStream);
+                      if (this.Table == null)
+                        ExcelGenerator.CreateExcelXStreamBySvgs(CreateSvgDocuments(this.Svgs), outputStream);
+                    else
+                        ExcelGenerator.CreateExcelXWithTableStreamBySvg(CreateSvgDocument(this.Svg), outputStream, this.Table);
+                    break;
                     break;
                 default:
                     throw new InvalidOperationException(string.Format(
@@ -335,6 +308,54 @@ namespace Tek4.Highcharts.Exporting
             }
 
             outputStream.Flush();
+        }
+
+        /// <summary>
+        /// get extension by content type
+        /// </summary>
+        /// <param name="contentType"></param>
+        /// <returns></returns>
+        internal string GetExtension(string contentType) {
+            string extension;
+            // Validate requested MIME type.
+            switch (contentType)
+            {
+                case "image/jpeg":
+                    extension = "jpg";
+                    break;
+                case "image/png":
+                    extension = "png";
+                    break;
+                case "application/pdf":
+                    extension = "pdf";
+                    break;
+                case "image/svg+xml":
+                    extension = "svg";
+                    break;
+                case "application/msword":
+                    extension = "doc";
+                    break;
+                case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                    extension = "docx";
+                    break;
+                //case "application/vnd.ms-powerpoint":
+                //    extension = "ppt";
+                //    break;
+                case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+                    extension = "pptx";
+                    break;
+                case "application/vnd.ms-excel":
+                    extension = "xls";
+                    break;
+                case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+                    extension = "xlsx";
+                    break;
+                // Unknown type specified. Throw exception.
+                default:
+                    throw new ArgumentException(
+                      string.Format("Invalid type specified: '{0}'.", contentType));
+            }
+            return extension;
         }
     }
 }

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2A1C0F1-BCB0-4F8E-91F6-46E9BAB31F7B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebDemo</RootNamespace>
+    <AssemblyName>WebDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common\data.xml" />
+    <Content Include="common\grid.xml" />
+    <Content Include="common\gridH.xml" />
+    <Content Include="common\grid_dates.xml" />
+    <Content Include="dhtmlx.css" />
+    <Content Include="DHXDataView.html" />
+    <Content Include="DHXGrid.html" />
+    <Content Include="DHXGrid2.html" />
+    <Content Include="HighChartsDownloadFileDemo.html" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_arrow_left.gif" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_arrow_right.gif" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_clock.gif" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_mark.gif" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_selector_bottom.gif" />
+    <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_selector_top.gif" />
+    <Content Include="imgs\dhxcombo_skyblue\dhxcombo_arrow_down.gif" />
+    <Content Include="imgs\dhxcombo_skyblue\dhxcombo_arrow_down_dis.gif" />
+    <Content Include="imgs\dhxcombo_skyblue\dhxcombo_chbx.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_left.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_left_abs.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_left_abs_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_left_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_right.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_right_abs.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_right_abs_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\ar_right_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\blank.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\combo_select_dhx_skyblue.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\dyn_.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\dyn_down.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\dyn_up.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\imageloaderror.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\item_chk0.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\item_chk0_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\item_chk1.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\item_chk1_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\minus.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\paging_page.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\paging_pages.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\paging_rows.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\plus.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\radio_chk0.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\radio_chk0_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\radio_chk1.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\radio_chk1_dis.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\sort_asc.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\sort_desc.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\blank.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\folder.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\leaf.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\line.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\line1.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\line2.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\line3.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\line4.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus1.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus2.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus3.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus4.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\minus5.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus1.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus2.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus3.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus4.gif" />
+    <Content Include="imgs\dhxgrid_skyblue\tree\plus5.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_arrow_down.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_arrow_down_dis.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_arrow_up.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_arrow_up_dis.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_chrd.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_loader.gif" />
+    <Content Include="imgs\dhxmenu_skyblue\dhxmenu_subar.gif" />
+    <Content Include="imgs\dhxtoolbar_skyblue\dhxtoolbar_arrow.gif" />
+    <Content Include="imgs\dhxtoolbar_skyblue\dhxtoolbar_arrow_dis.gif" />
+    <Content Include="js\dhtmlx.js" />
+    <Content Include="js\dhtmlxgrid.js" />
+    <Content Include="js\dhtmlxgrid_deprecated.js" />
+    <Content Include="js\exporting.extend.src.js" />
+    <Content Include="js\exporting.js" />
+    <Content Include="js\exporting.src.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts.src.js" />
+    <Content Include="js\init.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5583</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

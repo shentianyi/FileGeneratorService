@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>DataView</title>
+		<link rel="stylesheet" href="dhtmlx.css" type="text/css" />
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="js/dhtmlx.js" type="text/javascript"></script>
+		<script src="js/dhtmlxgrid_deprecated.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="data_container" style="border:1px solid #A4BED4; background-color:white;width:596px;height:396px;">
+			I
+		</div>
+		<button onclick="getxml()">
+			GetXML
+		</button>
+		<button onclick="view.toExcel('http://localhost:6023/DHXFileService/Excel')">
+			Get EXCEL
+		</button>
+		<div id="json">
+			I
+		</div>
+		<script type="text/javascript">
+			view = new dhtmlXDataView({
+				container : "data_container",
+				type : {
+					template : "#Package# : #Version#<br/>#Maintainer#",
+					height : 40
+				}
+			});
+			view.load("common/data.xml");
+			function getxml() {
+				$("#json").text(JSON.stringify(view.serialize()));
+			}
+
+
+			dhtmlXDataView.prototype.toExcel = function(url) {
+				console.log(url);
+				var data = this.serialize();
+				var xml = "<rows  profile='color'>";
+				// generate head
+				xml += '<head><columns>';
+				for (var h in data[0]) {
+					if (h != 'id' && h != 'value') {
+						xml += "<column  color=''><![CDATA[" + $.trim(h) + ']]></column>';
+					}
+				}
+				xml += '</columns></head>';
+				// generate rows
+				for (var i = 0; i < data.length; i++) {
+					xml += '<row>';
+					for (var d in data[i]) {
+						if (d != 'id' && d != 'value') {
+							xml += '<cell><![CDATA[' + $.trim(data[i][d]) + ']]></cell>';
+						}
+					}
+					xml += '</row>';
+				}
+				xml += '</rows>';
+				var to_excel_form = $('<form>', {
+					action : url,
+					method : 'post',
+					target : '_blank'
+				}).append($('<input>', {
+					type : 'hidden',
+					name : 'grid_xml',
+					value : xml
+				})).appendTo('body').submit();
+			};
+		</script>
+	</body>
+</html>

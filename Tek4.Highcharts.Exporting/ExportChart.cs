@@ -39,7 +39,7 @@ namespace Tek4.Highcharts.Exporting
   using System;
   using System.Web;
     using System.Text.RegularExpressions;
-
+    
   /// <summary>
   /// Processes web requests to export Highcharts JS JavaScript charts.
   /// </summary>
@@ -63,9 +63,11 @@ namespace Tek4.Highcharts.Exporting
                 // Get HTTP POST form variables, ensuring they are not null.
                 string filename = request.Form["filename"];
                 string type = request.Form["type"];
-                bool muti = (int.Parse( request.Form["muti"])==1);
+                bool muti = int.Parse( request.Form["muti"])==1;
+                bool tabled = bool.Parse(request.Form["tabled"]);
                 int width = 0;
                 
+                string table = request.Form["table"];
                 string[] svgs =null;
                 if (muti)
                 {
@@ -83,7 +85,8 @@ namespace Tek4.Highcharts.Exporting
                   request.Form["svg"] != null)
                 {
                     // Create a new chart export object using form variables.
-                    Exporter export = new Exporter(filename, type, width, svgs);
+
+                    Exporter export = tabled? new Exporter(filename,type,width,svgs,request.Form["table"]) : new Exporter(filename, type, width, svgs);
 
                     // Write the exported chart to the HTTP Response object.
                     export.WriteToHttpResponse(context.Response);

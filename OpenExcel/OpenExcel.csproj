@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ECCE21E-FACF-4D88-8149-4D65889ABBB7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>OpenExcel</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\ThirdPart\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
+    <Compile Include="OpenExcel\Utilities\BinarySearchExtension.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\IStylable.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelFont.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelRows.cs" />
+    <Compile Include="OpenExcel\OleDb\OleDbExcelWorksheets.cs" />
+    <Compile Include="OpenExcel\OleDb\OleDbExcelReader.cs" />
+    <Compile Include="OpenExcel\Common\ExcelConstraints.cs" />
+    <Compile Include="OpenExcel\Common\ExcelFormula.cs" />
+    <Compile Include="OpenExcel\OleDb\OleDbExcelWorksheet.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelWorkbook.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelColumn.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelNumberFormat.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\Scanner.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\TokenType.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\Token.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\DocumentStyles.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\SchemaInfo.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelRow.cs" />
+    <Compile Include="OpenExcel\Common\ExcelAddress.cs" />
+    <Compile Include="OpenExcel\Common\SheetChange.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelDocument.cs" />
+    <Compile Include="OpenExcel\OleDb\OleDbCells.cs" />
+    <Compile Include="OpenExcel\OleDb\OleDbCell.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelWorksheet.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelBorderStyleValues.cs" />
+    <Compile Include="OpenExcel\Utilities\ValueChecker.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\CellProxy.cs" />
+    <Compile Include="OpenExcel\Common\ExcelRange.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelColumns.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\WorksheetCache.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelFill.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\DocumentSharedStrings.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\ParseErrors.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\ParseError.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\ParseNode.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\ParseTree.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelWorksheets.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelCells.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelCell.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelBorder.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\ExcelCellFormula.cs" />
+    <Compile Include="OpenExcel\OleDb\ReaderOptions.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Internal\CellFormulaProxy.cs" />
+    <Compile Include="OpenExcel\Common\FormulaParser\Parser.cs" />
+    <Compile Include="OpenExcel\Common\RowColumn.cs" />
+    <Compile Include="OpenExcel\Common\RangeParser\RangeComponents.cs" />
+    <Compile Include="OpenExcel\OleDb\IMEXOptions.cs" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelStyle.cs" />
+  </ItemGroup>
+</Project>

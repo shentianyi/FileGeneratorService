@@ -58,6 +58,7 @@
     <Content Include="DHXDataView.html" />
     <Content Include="DHXGrid.html" />
     <Content Include="DHXGrid2.html" />
+    <Content Include="DHXGridSpanCol.html" />
     <Content Include="HighChartsDownloadFileDemo.html" />
     <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_arrow_left.gif" />
     <Content Include="imgs\dhxcalendar_skyblue\dhxcalendar_arrow_right.gif" />

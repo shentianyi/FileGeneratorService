@@ -12,7 +12,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.XML" />
     <Reference Include="WindowsBase" />
+    <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelAligment.cs" />
     <Compile Include="OpenExcel\Utilities\BinarySearchExtension.cs" />
     <Compile Include="OpenExcel\OfficeOpenXml\Style\IStylable.cs" />
     <Compile Include="OpenExcel\OfficeOpenXml\Style\ExcelFont.cs" />

@@ -11,11 +11,12 @@
 
     public class ExcelCell : IStylable
     {
-        internal ExcelCell(uint row, uint col, ExcelWorksheet wsheet)
+        internal ExcelCell(uint row, uint col, ExcelWorksheet wsheet,bool _isHead=false)
         {
             this.Row = row;
             this.Column = col;
             this.Worksheet = wsheet;
+            this.IsHead = _isHead;
         }
 
         private object GetValue()
@@ -149,6 +150,8 @@
         }
 
         public uint Row { get; protected set; }
+        private bool isHead = false;
+        public bool IsHead { get { return isHead; } set { isHead = value; } }
 
         public ExcelStyle Style
         {
@@ -160,7 +163,7 @@
                 {
                     baseStyleIndex = cell.StyleIndex;
                 }
-                return new ExcelStyle(this, this.Worksheet.Document.Styles, baseStyleIndex);
+                return new ExcelStyle(this, this.Worksheet.Document.Styles, baseStyleIndex,this.IsHead);
             }
             set
             {

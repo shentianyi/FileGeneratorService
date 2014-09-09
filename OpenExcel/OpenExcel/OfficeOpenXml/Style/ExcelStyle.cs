@@ -10,12 +10,17 @@
     {
         private IStylable _stylable;
         private DocumentStyles _styles;
+        public bool SetAlignmentCenter { get; set; }
 
-        internal ExcelStyle(IStylable stylable, DocumentStyles styles, uint? baseStyleIndex)
+        internal ExcelStyle(IStylable stylable, DocumentStyles styles, uint? baseStyleIndex,bool? isHead=false)
         {
             this._stylable = stylable;
             this._styles = styles;
             this.StyleIndex = baseStyleIndex;
+            if (isHead.HasValue)
+            {
+                this.SetAlignmentCenter = isHead.Value;
+            }
         }
 
         public void ApplySettings(DocumentFormat.OpenXml.Spreadsheet.Font font, DocumentFormat.OpenXml.Spreadsheet.Fill fill, params ExcelBorder[] borders)
@@ -86,6 +91,25 @@
             }
         }
 
+        // aligment by ws
+        //public Alignment Aligment {
+
+        //    get {
+        //        uint? styleIndex = this.StyleIndex;
+        //        Alignment ali = this._styles.GetCellFormat(styleIndex.HasValue ? styleIndex.GetValueOrDefault() : 0).Alignment ?? null;
+        //        return ali;
+        //    }
+        //    set {
+        //        if (value != null) {
+        //            CellFormat cfNew = new CellFormat
+        //            {
+        //                Alignment = value,
+        //                ApplyAlignment = true
+        //            };
+        //            this._stylable.Style=this;
+        //        }
+        //    }
+        //}
         public ExcelFont Font
         {
             get
@@ -105,6 +129,13 @@
                         FontId = num2,
                         ApplyFont = true
                     };
+                    // just a trick by ws
+                    if (this.SetAlignmentCenter)
+                    {
+                        cfNew.ApplyAlignment = true;
+                        cfNew.Alignment = new Alignment() { Horizontal = HorizontalAlignmentValues.Center,Vertical=VerticalAlignmentValues.Center };
+                    }    
+
                     uint? nullable2 = this.StyleIndex;
                     this.StyleIndex = new uint?(this._styles.MergeAndRegisterCellFormat(cfNew, nullable2.HasValue ? ((UInt32Value) nullable2.GetValueOrDefault()) : null, false));
                     if (this._stylable != null)

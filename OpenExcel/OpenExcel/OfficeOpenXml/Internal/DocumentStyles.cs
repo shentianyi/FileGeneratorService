@@ -284,6 +284,12 @@
             return this._wpart.WorkbookStylesPart.Stylesheet.Borders.Elements<Border>().ElementAt<Border>(((int) idx));
         }
 
+        //// get alignment by ws
+        //public Alignment GetAlignment(uint idx)
+        //{
+        //    return this._wpart.WorkbookStylesPart.Stylesheet.CellStyles.Elements<Alignment>().ElementAt<Alignment>(((int)idx));
+        //}
+
         public CellFormat GetCellFormat(uint idx)
         {
             return this._wpart.WorkbookStylesPart.Stylesheet.CellFormats.Elements<CellFormat>().ElementAt<CellFormat>(((int) idx));

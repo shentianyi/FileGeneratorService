@@ -10,6 +10,7 @@ using System.Web;
 
 using OpenExcel.OfficeOpenXml.Style;
 using OpenExcel.OfficeOpenXml;
+
 //using DocumentFormat.OpenXml.Spreadsheet;
 ///TODO: add text color, vertical alignment, horizontal alignment, colspan, rowspan
 namespace DHTMLX.Export.Excel
@@ -76,27 +77,27 @@ namespace DHTMLX.Export.Excel
             wb.EnsureStylesDefined();
         }
 
-        public void Generate(HttpContext context)
-        {
-            Generate(HttpUtility.UrlDecode(context.Request.Form["grid_xml"]), context.Response);
-        }
+        //public void Generate(HttpContext context)
+        //{
+        //    Generate(HttpUtility.UrlDecode(context.Request.Form["grid_xml"]), context.Response);
+        //}
 
 
-        public MemoryStream Generate(string xml)
-        {
-            var data = new MemoryStream();
+        //public MemoryStream Generate(string xml)
+        //{
+        //    var data = new MemoryStream();
 
-            Generate(xml, data); 
+        //    Generate(xml, data); 
 
-            return data;
-        }
-        public MemoryStream Generate(NameValueCollection form)
-        {
-            var xml = HttpUtility.UrlDecode(form["grid_xml"]);
-            var data = new MemoryStream();
-            Generate(xml, data);
-            return data;
-        }
+        //    return data;
+        //}
+        //public MemoryStream Generate(NameValueCollection form)
+        //{
+        //    var xml = HttpUtility.UrlDecode(form["grid_xml"]);
+        //    var data = new MemoryStream();
+        //    Generate(xml, data);
+        //    return data;
+        //}
         public string ContentType
         {
             get
@@ -129,18 +130,18 @@ namespace DHTMLX.Export.Excel
 
             }
         }
-        public void Generate(string xml, HttpResponseBase resp)
-        {
-            var data = new MemoryStream();
+        //public void Generate(string xml, HttpResponseBase resp)
+        //{
+        //    var data = new MemoryStream();
 
-            resp.ContentType = ContentType;
-            resp.HeaderEncoding = Encoding.UTF8;
-            resp.AppendHeader("Content-Disposition", "attachment;filename=my_report.xlsx");
-            resp.AppendHeader("Cache-Control", "max-age=0");
-            Generate(xml, data);
+        //    resp.ContentType = ContentType;
+        //    resp.HeaderEncoding = Encoding.UTF8;
+        //    resp.AppendHeader("Content-Disposition", "attachment;filename=my_report.xlsx");
+        //    resp.AppendHeader("Cache-Control", "max-age=0");
+        //    Generate(xml, data);
 
-            data.WriteTo(resp.OutputStream); 
-        }
+        //    data.WriteTo(resp.OutputStream); 
+        //}
 
 
         private void headerPrint(ExcelXmlParser parser)
@@ -175,25 +176,29 @@ namespace DHTMLX.Export.Excel
                     for (uint col = 1; col <= cols[row - 1].Length; col++)
                     {
 
+                        // trick before font
+                        //sheet.Cells[row, col].Style.SetAlignmentCenter = true;
+                        sheet.Cells[row, col,true].IsHead = true;
 
-                        sheet.Cells[row, col].Style.Font = font;//if bold font assigned after border - all table will be bold, weird, find out later
+                        sheet.Cells[row, col, true].Style.Font = font;//if bold font assigned after border - all table will be bold, weird, find out later
 
                         sheet.Cells[row, col].Style.Border = border;
+                        //sheet.Cells[row, col].Style.Aligment = new DocumentFormat.OpenXml.Spreadsheet.Alignment() { Horizontal = HorizontalAlignmentValues.Center };
+                      
 
                         sheet.Columns[col].Width = widths[col - 1] / scale;
                         String name = cols[row - 1][col - 1].GetName();
                         if (bgColor != "FFFFFFFF")
-                            sheet.Cells[row, col].Style.Fill.ForegroundColor = bgColor;
+                            sheet.Cells[row, col, true].Style.Fill.ForegroundColor = bgColor;
                         
                         ///TODO: 
                         ///font color, merge cells, alignment
-                        sheet.Cells[row, col].Value = name;
+                        sheet.Cells[row, col, true].Value = name;
                         colsNumber = (int)col;
                     }
                 }
                 headerOffset = cols.Length;
-
-
+ 
 
 
                 /*  for (int col = 0; col < cols.Length; col++) {
@@ -268,6 +273,7 @@ namespace DHTMLX.Export.Excel
                             sheet.Cells[rowInd, col].Style.Fill.ForegroundColor = bgColor;
                         sheet.Cells[rowInd, col].Style.Font = font;
                         //TODO add text color, vertical alignment, horizontal alignment
+                        
                         sheet.Cells[rowInd, col].Style.Border = border;
                         sheet.Cells[rowInd, col].Value = cols[row - 1][col - 1].GetName();
                     }
@@ -297,7 +303,7 @@ namespace DHTMLX.Export.Excel
 
             ExcelBorder border = getBorder();
 
-            // f.setAlignment(Alignment.CENTRE);
+            //f.setAlignment(Alignment.CENTRE);
             sheet.Cells[(uint)(headerOffset + 1), 0].Value = watermark;
             //  Label label = new Label(0, headerOffset, watermark , f);
             //  sheet.addCell(label);
@@ -324,10 +330,6 @@ namespace DHTMLX.Export.Excel
 
                 for (uint col = 1; col <= cells.Length; col++)
                 {
-
-
-
-
                     if (cells[col - 1].GetBold() || cells[col - 1].GetItalic())
                     {
                         ExcelFont curFont = wb.CreateFont("Arial", 10); ;

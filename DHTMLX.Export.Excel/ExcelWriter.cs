@@ -216,7 +216,8 @@ namespace DHTMLX.Export.Excel
             }
         }
 
-        protected void Mergehead() {
+        protected void Mergehead()
+        {
             for (int col = 0; col < cols.Length; col++)
             {
                 for (int row = 0; row < cols[col].Length; row++)
@@ -224,15 +225,15 @@ namespace DHTMLX.Export.Excel
                     int cspan = cols[col][row].GetColspan();
                     if (cspan > 0)
                     {
-                        ow.MergeCells(col + 1, row, col + 1, row + cspan - 1); 
+                        ow.MergeCells(col + 1, row, col + 1, row + cspan - 1);
                     }
                     int rspan = cols[col][row].GetRowspan();
                     if (rspan > 0)
                     {
-                        ow.MergeCells(col + 1, row, col+rspan, row); 
+                        ow.MergeCells(col + 1, row, col + rspan, row);
                     }
                 }
-            } 
+            }
         }
 
         protected ExcelBorder getBorder()

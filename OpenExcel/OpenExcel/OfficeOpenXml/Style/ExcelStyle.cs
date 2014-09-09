@@ -133,7 +133,11 @@
                     if (this.SetAlignmentCenter)
                     {
                         cfNew.ApplyAlignment = true;
-                        cfNew.Alignment = new Alignment() { Horizontal = HorizontalAlignmentValues.Center,Vertical=VerticalAlignmentValues.Center };
+                        cfNew.Alignment = new Alignment() { Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center };
+                    }
+                    else {
+                        cfNew.ApplyAlignment = true;
+                        cfNew.Alignment = new Alignment() {Vertical = VerticalAlignmentValues.Center };
                     }    
 
                     uint? nullable2 = this.StyleIndex;

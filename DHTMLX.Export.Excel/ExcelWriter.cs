@@ -178,8 +178,7 @@ namespace DHTMLX.Export.Excel
 
                         sheet.Cells[row, col].Style.Font = font;//if bold font assigned after border - all table will be bold, weird, find out later
 
-                        sheet.Cells[row, col].Style.Border = border;
-
+                        sheet.Cells[row, col].Style.Border = border; 
                         sheet.Columns[col].Width = widths[col - 1] / scale;
                         String name = cols[row - 1][col - 1].GetName();
                         if (bgColor != "FFFFFFFF")
@@ -192,8 +191,7 @@ namespace DHTMLX.Export.Excel
                     }
                 }
                 headerOffset = cols.Length;
-
-
+ 
 
 
                 /*  for (int col = 0; col < cols.Length; col++) {

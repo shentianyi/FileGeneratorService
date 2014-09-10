@@ -1,0 +1,346 @@
+﻿<report>
+	<table profile='color'>
+    <head>
+      <columns>
+        <column  rowspan="2"  width='100' align='right' type='dyn' hidden='false' sort='int' color='white'>
+          <![CDATA[Sales]]>
+        </column>
+        <column  colspan="2"  width='150' align='left' type='ed' hidden='false' sort='str' color='#d5f1ff'>
+          <![CDATA[Book]]>
+        </column>
+        <column  width='150' align='left' type='ed' hidden='false' sort='str' color='#d5f1ff'>
+          <![CDATA[]]>
+        </column>
+        <column  rowspan="2"  width='80' align='right' type='price' hidden='false' sort='int' color=''>
+          <![CDATA[Price]]>
+        </column>
+        <column  rowspan="2"  width='80' align='center' type='ch' hidden='false' sort='str' color=''>
+          <![CDATA[In Store]]>
+        </column>
+        <column  rowspan="2"  width='80' align='left' type='co' hidden='false' sort='str' color=''>
+          <![CDATA[Shipping]]>
+        </column>
+        <column  colspan="2"  width='80' align='center' type='ra' hidden='false' sort='str' color=''>
+          <![CDATA[Other Info]]>
+        </column>
+        <column  width='200' align='center' type='ro' hidden='false' sort='str' color=''>
+          <![CDATA[]]>
+        </column>
+      </columns>
+      <columns>
+        <column>
+          <![CDATA[]]>
+        </column>
+        <column>
+          <![CDATA[Title]]>
+        </column>
+        <column>
+          <![CDATA[Author]]>
+        </column>
+        <column>
+          <![CDATA[]]>
+        </column>
+        <column>
+          <![CDATA[]]>
+        </column>
+        <column>
+          <![CDATA[]]>
+        </column>
+        <column>
+          <![CDATA[Bestseller]]>
+        </column>
+        <column>
+          <![CDATA[Published]]>
+        </column>
+      </columns>
+    </head>
+		<body>
+      <row>
+        <cell>
+          <![CDATA[-1500]]>
+        </cell>
+        <cell>
+          <![CDATA[A Time to Kill]]>
+        </cell>
+        <cell>
+          <![CDATA[John Grisham]]>
+        </cell>
+        <cell>
+          <![CDATA[$12.99]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[24.9]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[05/01/1998]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[1000]]>
+        </cell>
+        <cell>
+          <![CDATA[Blood and Smoke]]>
+        </cell>
+        <cell>
+          <![CDATA[Stephen King]]>
+        </cell>
+        <cell>
+          <![CDATA[$0]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[284]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/2000]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[-200]]>
+        </cell>
+        <cell>
+          <![CDATA[The Rainmaker]]>
+        </cell>
+        <cell>
+          <![CDATA[John Grisham]]>
+        </cell>
+        <cell>
+          <![CDATA[$7.99]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[48]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[12/01/2001]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[350]]>
+        </cell>
+        <cell>
+          <![CDATA[The Green Mile]]>
+        </cell>
+        <cell>
+          <![CDATA[Stephen King]]>
+        </cell>
+        <cell>
+          <![CDATA[$11.10]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[24]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/1992]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[700]]>
+        </cell>
+        <cell>
+          <![CDATA[Misery]]>
+        </cell>
+        <cell>
+          <![CDATA[Stephen King]]>
+        </cell>
+        <cell>
+          <![CDATA[$7.70]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[na]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/2003]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[-1200]]>
+        </cell>
+        <cell>
+          <![CDATA[The Dark Half]]>
+        </cell>
+        <cell>
+          <![CDATA[Stephen King]]>
+        </cell>
+        <cell>
+          <![CDATA[$0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[48]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[10/30/1999]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[1500]]>
+        </cell>
+        <cell>
+          <![CDATA[The Partner]]>
+        </cell>
+        <cell>
+          <![CDATA[John Grisham]]>
+        </cell>
+        <cell>
+          <![CDATA[$12.99]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[48]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/2005]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[500]]>
+        </cell>
+        <cell>
+          <![CDATA[It]]>
+        </cell>
+        <cell>
+          <![CDATA[Stephen King]]>
+        </cell>
+        <cell>
+          <![CDATA[$9.70]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[na]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[10/15/2001]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[400]]>
+        </cell>
+        <cell>
+          <![CDATA[Cousin Bette]]>
+        </cell>
+        <cell>
+          <![CDATA[Honore de Balzac]]>
+        </cell>
+        <cell>
+          <![CDATA[$0]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[12/01/1991]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[-100]]>
+        </cell>
+        <cell>
+          <![CDATA[Boris Godunov]]>
+        </cell>
+        <cell>
+          <![CDATA[Alexandr Pushkin]]>
+        </cell>
+        <cell>
+          <![CDATA[$7.15]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/1999]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[-150]]>
+        </cell>
+        <cell>
+          <![CDATA[Alice in Wonderland]]>
+        </cell>
+        <cell>
+          <![CDATA[Lewis Carroll]]>
+        </cell>
+        <cell>
+          <![CDATA[$4.15]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[01/01/1999]]>
+        </cell>
+      </row>
+    </body>
+	</table>
+</report>

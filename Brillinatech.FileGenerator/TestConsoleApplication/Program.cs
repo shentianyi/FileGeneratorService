@@ -16,6 +16,7 @@ namespace TestConsoleApplication
           // OpenXMLTest.RunMerge();
            // OpenXMLChartTest.Run();
             EPPlusExcelChartTest.Run();
+         //   BTReportChartTest.Run();
            // Console.Read();
         }
     }

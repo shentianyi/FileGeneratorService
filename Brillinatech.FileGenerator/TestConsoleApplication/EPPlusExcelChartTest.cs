@@ -15,7 +15,7 @@ namespace TestConsoleApplication
     {
         private static readonly string[] MonthNames = new string[] { "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" };
         
-        private static readonly string[] CommpanyNames = new string[] { "Microsoft" };
+        private static readonly string[] CommpanyNames = new string[] { "Microsoft","HH" };
 
         public static void Run() {
             string fileName = "ExcelReport-" + DateTime.Now.ToString("yyyy_MM_dd_HHmmss") + ".xlsx";
@@ -24,6 +24,7 @@ namespace TestConsoleApplication
             using (ExcelPackage package = new ExcelPackage(file))
             {
                 ExcelWorksheet worksheet = null;
+                
                 ExcelChartSerie chartSerie = null;
                 ExcelBarChart chart = null;
                 #region research
@@ -38,6 +39,8 @@ namespace TestConsoleApplication
                 //chart.SetPosition(200, 50);//设置图表位置  
                 chart.SetSize(800, 400);//设置图表大小  
                 chart.ShowHiddenData = true;
+               // chart.PlotArea.Fill.Color = Color.Red;
+              //  chart.Fill.Color = Color.DarkBlue;
                 //chart.YAxis.MinorUnit = 1;  
                 chart.XAxis.MinorUnit = 1;//设置X轴的最小刻度  
                 chart.DataLabel.ShowValue = true;
@@ -89,16 +92,20 @@ namespace TestConsoleApplication
                     //chartSerie.HeaderAddress = worksheet.Cells["A2"];  
                     //chart.Series.Add()方法所需参数为：chart.Series.Add(X轴数据区,Y轴数据区)  
                     chartSerie = chart.Series.Add(worksheet.Cells[row + 1, 2, row + 1, 2 + dataPercent.Columns.Count - 2], worksheet.Cells[row , 2, row , 2 + dataPercent.Columns.Count - 2]);
-                    chartSerie.HeaderAddress = worksheet.Cells[row + 1, 1];//设置每条线的名称  
-                }
+
+                    chartSerie.HeaderAddress = worksheet.Cells[row + 1, 1];//设置每条线的名称
+                    
+                 }
                 //因为假定每家公司至少完成了80%以上，所以这里设置Y轴的最小刻度为80%，这样使图表上的折线更清晰  
                  //chart.YAxis.MinValue = 0.8d;
                 
                 //chart.SetPosition(200, 50);//可以通过制定左上角坐标来设置图表位置  
                 //通过指定图表左上角所在的行和列及对应偏移来指定图表位置  
                 //这里CommpanyNames.Length + 1及3分别表示行和列  
-                chart.SetPosition(CommpanyNames.Length + 1, 10, 3, 20);
-              
+                  chart.SetPosition(CommpanyNames.Length + 1, 0, 3, 0);
+                  //chart.Border.Fill.Color = Color.Yellow;
+                
+
                 #endregion research
                 package.Save();//保存文件  
             }  

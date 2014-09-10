@@ -45,14 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RChart.cs" />
+    <Compile Include="Chart\RChart.cs" />
+    <Compile Include="Chart\RSerie.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RTable.cs" />
-    <Compile Include="RTCell.cs" />
-    <Compile Include="RTRow.cs" />
+    <Compile Include="Table\RTable.cs" />
+    <Compile Include="Table\RTCell.cs" />
+    <Compile Include="Table\RTColumn.cs" />
+    <Compile Include="Table\RTRow.cs" />
     <Compile Include="Util\JsonUtil.cs" />
-    <Compile Include="XmlParser\TableParser.cs" />
+    <Compile Include="XmlParser\ReportXmlParser.cs" />
+    <Compile Include="XmlParser\TableXmlParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

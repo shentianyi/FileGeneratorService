@@ -161,7 +161,7 @@ namespace DHTMLX.Export.Excel
 
             if (parser.getWithoutHeader() == false)
             {
-                ExcelFont font = wb.CreateFont("Arial", 9);
+                ExcelFont font = wb.CreateFont("Arial", 10);
                 font.Bold = true;
                 if (headerTextColor != "FF000000")
                     font.Color = headerTextColor;
@@ -172,7 +172,7 @@ namespace DHTMLX.Export.Excel
                 for (uint row = 1; row <= cols.Length; row++)
                 {
 
-                    sheet.Rows[row].Height = 22.5;
+                 //   sheet.Rows[row].Height = 22.5;
                     for (uint col = 1; col <= cols[row - 1].Length; col++)
                     {
 
@@ -265,7 +265,7 @@ namespace DHTMLX.Export.Excel
                 {
 
                     uint rowInd = (uint)(row + headerOffset);
-                    sheet.Rows[rowInd].Height = 22.5;
+                  //  sheet.Rows[rowInd].Height = 22.5;
 
                     for (uint col = 1; col <= cols[row - 1].Length; col++)
                     {

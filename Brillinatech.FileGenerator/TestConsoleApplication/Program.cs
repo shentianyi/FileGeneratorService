@@ -13,8 +13,11 @@ namespace TestConsoleApplication
         {
            // Console.WriteLine((BorderStyleValues)(int)ExcelBorderStyleValues.DashDot);
           //OpenXMLTest.Run();
-           OpenXMLTest.RunMerge();
-            Console.Read();
+          // OpenXMLTest.RunMerge();
+           // OpenXMLChartTest.Run();
+          //  EPPlusExcelChartTest.Run();
+        BTReportChartTest.Run();
+           // Console.Read();
         }
     }
 }

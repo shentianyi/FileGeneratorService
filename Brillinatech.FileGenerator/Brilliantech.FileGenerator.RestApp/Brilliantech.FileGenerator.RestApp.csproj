@@ -69,8 +69,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTReportService.cs" />
     <Compile Include="DHXFileService.cs" />
     <Compile Include="HighChartsFileService.cs" />
+    <Compile Include="ReportServiceBase.cs" />
     <Compile Include="SampleItem.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -85,6 +87,10 @@
     <ProjectReference Include="..\..\Tek4.Highcharts.Exporting\Tek4.Highcharts.Exporting.csproj">
       <Project>{42BDE168-C741-4339-92B6-0656E798E989}</Project>
       <Name>Tek4.Highcharts.Exporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Brilliantech.Export.Report\Brilliantech.Export.Report.csproj">
+      <Project>{9AB27194-EBD4-4952-8DAC-60BA1FF277E9}</Project>
+      <Name>Brilliantech.Export.Report</Name>
     </ProjectReference>
     <ProjectReference Include="..\DHX.Excel.Exporting\DHX.Excel.Exporting.csproj">
       <Project>{1A1D649F-B9C0-4415-925A-C9B33F9A150B}</Project>

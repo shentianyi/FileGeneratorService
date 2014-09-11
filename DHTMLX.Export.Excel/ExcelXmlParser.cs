@@ -17,7 +17,7 @@ namespace DHTMLX.Export.Excel
         public void setXML(string xml)
         {
 
-            XmlDocument dom = new XmlDocument(); ;
+            XmlDocument dom = new XmlDocument();
             try
             {
                 ///TODO: handle exceptions, log maybe

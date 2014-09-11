@@ -16,7 +16,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -39,8 +39,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdPart\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\ThirdPart\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Log" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,9 +54,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BTReportTest.cs" />
+    <Compile Include="BTReportChartTest.cs" />
+    <Content Include="data\report_meta.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="EPPlusExcelChartTest.cs" />
+    <Compile Include="OpenXMLChartTest.cs" />
     <Compile Include="OpenXMLTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="data\report_chart_meta.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -61,6 +77,10 @@
     <ProjectReference Include="..\..\OpenExcel\OpenExcel.csproj">
       <Project>{4ECCE21E-FACF-4D88-8149-4D65889ABBB7}</Project>
       <Name>OpenExcel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Brilliantech.Export.Report\Brilliantech.Export.Report.csproj">
+      <Project>{9AB27194-EBD4-4952-8DAC-60BA1FF277E9}</Project>
+      <Name>Brilliantech.Export.Report</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

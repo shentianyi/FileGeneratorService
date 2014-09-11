@@ -17,6 +17,7 @@ namespace Brilliantech.FileGenerator.RestApp
             RouteTable.Routes.Add(new ServiceRoute("HighChartsFileService", new WebServiceHostFactory(), typeof(HighChartsFileService)));
             RouteTable.Routes.Add(new ServiceRoute("TestService", new WebServiceHostFactory(), typeof(TestService)));
             RouteTable.Routes.Add(new ServiceRoute("DHXFileService", new WebServiceHostFactory(), typeof(DHXFileService)));
+            RouteTable.Routes.Add(new ServiceRoute("BTReportService", new WebServiceHostFactory(), typeof(BTReportService)));
         }
     }
 }

@@ -37,6 +37,22 @@
             }
         }
 
+        public ExcelCell this[uint row, uint col,bool isHead]
+        {
+            get
+            {
+                if ((row < 1) || (row > ExcelConstraints.MaxRows))
+                {
+                    throw new ArgumentException("Invalid row value");
+                }
+                if ((col < 1) || (col > ExcelConstraints.MaxColumns))
+                {
+                    throw new ArgumentException("Invalid column value");
+                }
+                return new ExcelCell(row, col, this.Worksheet,isHead);
+            }
+        }
+
         public ExcelWorksheet Worksheet { get; protected set; }
     }
 }

@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EPPlus">
-      <HintPath>..\..\ThirdPart\EPPlus.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -48,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Chart\RChart.cs" />
     <Compile Include="Chart\RSerie.cs" />
+    <Compile Include="Enum\CellFormat.cs" />
     <Compile Include="IReport.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,6 +60,12 @@
     <Compile Include="XmlParser\ChartXmlParser.cs" />
     <Compile Include="XmlParser\ReportXmlParser.cs" />
     <Compile Include="XmlParser\TableXmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EPPlus\EPPlus\EPPlus.csproj">
+      <Project>{7B288026-5502-4A39-BF41-77E086F3E4A3}</Project>
+      <Name>EPPlus</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

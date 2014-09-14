@@ -14,8 +14,6 @@ namespace Brilliantech.Export.Report.Chart
         private int? height;
         private int? width;
         private bool showLegend = false;
-        private bool useSecondaryAxis = false;
-        private ChartAxisFormatType yAxisFormatType = ChartAxisFormatType.None;
 
         private RSerie[] series;
 
@@ -48,24 +46,9 @@ namespace Brilliantech.Export.Report.Chart
                     series[i] = new RSerie(nodes[i]);
                 }
             }
-
-            if (ele.HasAttribute("use_secondary_axis"))
-            {
-                this.useSecondaryAxis = bool.Parse(parent.Attributes["use_secondary_axis"].Value);
-            }
-            if (ele.HasAttribute("yaxis_format_type"))
-            {
-                this.yAxisFormatType = (ChartAxisFormatType)int.Parse(parent.Attributes["yaxis_format_type"].Value);
-            }
+          
         }
 
-        public string YAxisFormatString
-        {
-            get
-            {
-                return ChartAxisFormat.GetFormatString(this.yAxisFormatType);
-            }
-        }
         public string Title
         {
             get { return title; } 
@@ -86,15 +69,6 @@ namespace Brilliantech.Export.Report.Chart
         {
             get { return showLegend; }
         }
-        public bool UseSecondaryAxis
-        {
-            get { return useSecondaryAxis; }
-        }
-         
-        public ChartAxisFormatType AxisFormatType
-        {
-            get { return yAxisFormatType; }
-            set { yAxisFormatType = value; }
-        }
+       
     }
 }

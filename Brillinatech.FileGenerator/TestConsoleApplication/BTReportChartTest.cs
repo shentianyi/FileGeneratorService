@@ -12,7 +12,7 @@ namespace TestConsoleApplication
         public static void Run() {
             string xml;
             
-            using (FileStream file = new FileStream("data\\report_chart_meta.xml", FileMode.Open, FileAccess.Read))
+            using (FileStream file = new FileStream("data\\report_with_format.xml", FileMode.Open, FileAccess.Read))
             {
                 using (MemoryStream ms = new MemoryStream()) {
                     file.CopyTo(ms); 

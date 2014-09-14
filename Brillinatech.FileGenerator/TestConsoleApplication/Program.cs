@@ -17,7 +17,9 @@ namespace TestConsoleApplication
            // OpenXMLChartTest.Run();
           //  EPPlusExcelChartTest.Run();
         BTReportChartTest.Run();
-           // Console.Read();
+          //  string a = "40.99";
+          //  Console.WriteLine((double.Parse(a)/100).ToString());
+            //Console.Read();
         }
     }
 }

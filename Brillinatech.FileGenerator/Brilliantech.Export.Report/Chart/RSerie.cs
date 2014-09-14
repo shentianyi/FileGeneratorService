@@ -5,6 +5,7 @@ using System.Text;
 using OfficeOpenXml.Drawing.Chart;
 using System.Drawing;
 using System.Xml;
+using Brilliantech.Export.Report.Enum;
 
 namespace Brilliantech.Export.Report.Chart
 {
@@ -27,6 +28,9 @@ namespace Brilliantech.Export.Report.Chart
         private string yAixs;
         private bool showDataLabel = true;
 
+        private bool useSecondaryAxis = false;
+        private ChartAxisFormatType yAxisFormatType = ChartAxisFormatType.None;
+        private string headerAddress = null;
         public RSerie() { 
          
         }
@@ -41,11 +45,12 @@ namespace Brilliantech.Export.Report.Chart
             else if(string.Equals(_type, "line")) {
                 this.type = eChartType.Line;
             }
-            if (((XmlElement)parent).HasAttribute("show_data_label")) {
+            XmlElement ele=(XmlElement)parent;
+            if (ele.HasAttribute("show_data_label")) {
                 this.showDataLabel = bool.Parse(parent.Attributes["show_data_label"].Value);
             }
 
-            if (((XmlElement)parent).HasAttribute("color"))
+            if (ele.HasAttribute("color"))
             {
                 this.colorString = parent.Attributes["color"].Value;
                 if (this.colorString.StartsWith("#"))
@@ -61,16 +66,18 @@ namespace Brilliantech.Export.Report.Chart
            // var d = parent.SelectSingleNode("xstart_row");
             this.xAixs = parent.SelectSingleNode("xaixs").FirstChild.Value;
 
-            this.yAixs = parent.SelectSingleNode("yaixs").FirstChild.Value;
-            //this.xStartRow = int.Parse(parent.SelectSingleNode("xstart_row").FirstChild.Value);
-            //this.xStartCol = int.Parse(parent.SelectSingleNode("xstart_col").FirstChild.Value);
-            //this.xEndRow = int.Parse(parent.SelectSingleNode("xend_row").FirstChild.Value);
-            //this.xEndCol = int.Parse(parent.SelectSingleNode("xend_col").FirstChild.Value);
-
-            //this.yStartRow = int.Parse(parent.SelectSingleNode("ystart_row").FirstChild.Value);
-            //this.yStartCol = int.Parse(parent.SelectSingleNode("ystart_col").FirstChild.Value);
-            //this.yEndRow = int.Parse(parent.SelectSingleNode("yend_row").FirstChild.Value);
-            //this.yEndCol = int.Parse(parent.SelectSingleNode("yend_col").FirstChild.Value);
+            this.yAixs = parent.SelectSingleNode("yaixs").FirstChild.Value; 
+            if (ele.HasAttribute("use_secondary_axis"))
+            {
+                this.useSecondaryAxis = bool.Parse(parent.Attributes["use_secondary_axis"].Value);
+            }
+            if (ele.HasAttribute("yaxis_format_type"))
+            {
+                this.yAxisFormatType = (ChartAxisFormatType)int.Parse(parent.Attributes["yaxis_format_type"].Value);
+            }
+            if (ele.HasAttribute("header_address")) {
+                this.headerAddress = parent.Attributes["header_address"].Value;
+            }
         }
         public eChartType Type
         {
@@ -100,48 +107,29 @@ namespace Brilliantech.Export.Report.Chart
         {
             get { return showDataLabel; }
         }
-        //public int XStartRow
-        //{
-        //    get { return xStartRow; }
-        //    set { xStartRow = value; }
-        //}
-        //public int XStartCol
-        //{
-        //    get { return xStartCol; }
-        //    set { xStartCol = value; }
-        //}
-        //public int XEndRow
-        //{
-        //    get { return xEndRow; }
-        //    set { xEndRow = value; }
-        //}
-        //public int XEndCol
-        //{
-        //    get { return xEndCol; }
-        //    set { xEndCol = value; }
-        //}
+        public bool UseSecondaryAxis
+        {
+            get { return useSecondaryAxis; }
+        }
 
-        //public int YStartRow
-        //{
-        //    get { return yStartRow; }
-        //    set { yStartRow = value; }
-        //}
-        //public int YStartCol
-        //{
-        //    get { return yStartCol; }
-        //    set { yStartCol = value; }
-        //}
-        //public int YEndRow
-        //{
-        //    get { return yEndRow; }
-        //    set { yEndRow = value; }
-        //}
-        //public int YEndCol
-        //{
-        //    get { return yEndCol; }
-        //    set { yEndCol = value; }
-        //}
+        public ChartAxisFormatType AxisFormatType
+        {
+            get { return yAxisFormatType; }
+            set { yAxisFormatType = value; }
+        }
 
+        public string YAxisFormatString
+        {
+            get
+            {
+                return ChartAxisFormat.GetFormatString(this.yAxisFormatType);
+            }
+        }
+        public string HeaderAddress
+        {
+            get { return headerAddress; }
+            set { headerAddress = value; }
+        }
 
     }
 }

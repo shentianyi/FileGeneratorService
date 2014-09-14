@@ -231,71 +231,63 @@
 				<cell>
 					<![CDATA[FTQ]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[13%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[50%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[0%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[7%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[40%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[20%]]>
 				</cell>
-				<cell>
+				<cell format="1">
 					<![CDATA[100%]]>
 				</cell>
 			</row>
 		</body>
 	</table>
 	<charts>
-		<chart title="Quality Buyoff station Vehicle status" use_secondary_axis="true" yaxis_format_type="1" height="300" width="1150"  show_legend="true">
-			<serie color="#D1E5FE" type="column">
-				<xaixs>
-					<![CDATA[B1:R1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B2:R2]]>
-				</yaixs>
-			</serie>
-			<serie color="#D1E5FE" type="column">
+		<chart title="Quality Buyoff station Vehicle status" height="300" width="1150"  show_legend="true">
+				<serie color="#D1E5FE" type="column"  header_address="A3">
 				<xaixs>
 					<![CDATA[B1:R1]]>
 				</xaixs>
@@ -303,7 +295,15 @@
 					<![CDATA[B3:R3]]>
 				</yaixs>
 			</serie>
-			<serie color="#D1E5FE" type="line">
+			<serie color="#D1E5FE" type="column"  header_address="A4">
+				<xaixs>
+					<![CDATA[B1:R1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B4:R4]]>
+				</yaixs>
+			</serie>
+			<serie color="#D1E5FE" type="line" use_secondary_axis="true" yaxis_format_type="1" header_address="A5">
 				<xaixs>
 					<![CDATA[B1:R1]]>
 				</xaixs>

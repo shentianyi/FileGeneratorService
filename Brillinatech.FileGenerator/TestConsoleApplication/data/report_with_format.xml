@@ -1,0 +1,316 @@
+<report>
+  <table>
+    <head>
+      <columns>
+        <column width='80'>
+          <![CDATA[iQ station]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ1]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ2]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ3]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ4]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ5]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ Dr]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ IP]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ6]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ7]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ8]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ9]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ10]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ11]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ12]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ13]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ14]]>
+        </column>
+        <column width='55'>
+          <![CDATA[iQ15]]>
+        </column>
+      </columns>
+    </head>
+    <body>
+      <row>
+        <cell>
+          <![CDATA[Vehicle Total]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[10]]>
+        </cell>
+        <cell>
+          <![CDATA[8]]>
+        </cell>
+        <cell>
+          <![CDATA[8]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[9]]>
+        </cell>
+        <cell>
+          <![CDATA[2]]>
+        </cell>
+        <cell>
+          <![CDATA[8]]>
+        </cell>
+        <cell>
+          <![CDATA[12]]>
+        </cell>
+        <cell>
+          <![CDATA[11]]>
+        </cell>
+        <cell>
+          <![CDATA[11]]>
+        </cell>
+        <cell>
+          <![CDATA[15]]>
+        </cell>
+        <cell>
+          <![CDATA[10]]>
+        </cell>
+        <cell>
+          <![CDATA[6]]>
+        </cell>
+        <cell>
+          <![CDATA[5]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[NOK vehicle]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[7]]>
+        </cell>
+        <cell>
+          <![CDATA[8]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[6]]>
+        </cell>
+        <cell>
+          <![CDATA[11]]>
+        </cell>
+        <cell>
+          <![CDATA[11]]>
+        </cell>
+        <cell>
+          <![CDATA[14]]>
+        </cell>
+        <cell>
+          <![CDATA[6]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[4]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[OK vehicle]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[10]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[9]]>
+        </cell>
+        <cell>
+          <![CDATA[2]]>
+        </cell>
+        <cell>
+          <![CDATA[8]]>
+        </cell>
+        <cell>
+          <![CDATA[6]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[0]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[4]]>
+        </cell>
+        <cell>
+          <![CDATA[6]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+        <cell>
+          <![CDATA[1]]>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <![CDATA[FTQ]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[13%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[50%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[0%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[7%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[40%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[20.9%]]>
+        </cell>
+        <cell format="1">
+          <![CDATA[100%]]>
+        </cell>
+      </row>
+    </body>
+  </table>
+  <charts>
+    <chart title="Quality Buyoff station Vehicle status" height="300" width="1150"  show_legend="true">
+      <serie color="D1E5FE" type="column"  header_address="A3">
+        <xaixs>
+          <![CDATA[B1:R1]]>
+        </xaixs>
+        <yaixs>
+          <![CDATA[B3:R3]]>
+        </yaixs>
+      </serie>
+      <serie color="D1E5FE" type="column"  header_address="A4">
+        <xaixs>
+          <![CDATA[B1:R1]]>
+        </xaixs>
+        <yaixs>
+          <![CDATA[B4:R4]]>
+        </yaixs>
+      </serie>
+      <serie color="B439E9" type="line" use_secondary_axis="true" yaxis_format_type="1" header_address="A5">
+        <xaixs>
+          <![CDATA[B1:R1]]>
+        </xaixs>
+        <yaixs>
+          <![CDATA[B5:R5]]>
+        </yaixs>
+      </serie>
+    </chart>
+  </charts>
+</report>

@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Drawing;
 using OfficeOpenXml.Style;
+using Brilliantech.Export.Report.Enum;
 
 namespace Brilliantech.Export.Report.Table
 {
@@ -14,6 +15,8 @@ namespace Brilliantech.Export.Report.Table
         private Color backgroundColor = ColorTranslator.FromHtml("#E3EFFF");
         private ExcelBorderStyle borderStyle = ExcelBorderStyle.Thin;
         private Color borderColor = ColorTranslator.FromHtml("#A4BED4");
+        private string cellFormatString = null;
+        private CellFormatType cellFormatType = CellFormatType.None;
 
         public RTCell() { }
 
@@ -21,7 +24,11 @@ namespace Brilliantech.Export.Report.Table
         {
             if (parent.HasChildNodes)
                 value = parent.FirstChild.Value;
-            XmlElement el = (XmlElement)parent; 
+            XmlElement ele = (XmlElement)parent;
+            if (ele.HasAttribute("format")) {
+                this.cellFormatType = (CellFormatType)int.Parse(parent.Attributes["format"].Value);
+                this.cellFormatString = CellFormat.GetFormatString(this.cellFormatType);
+            }
         }
 
 
@@ -54,17 +61,31 @@ namespace Brilliantech.Export.Report.Table
 
         public object GetValue()
         {
-            int iVal;
-            double dVal;
-            if (int.TryParse(this.value, out iVal))
-            {
-                return iVal;
-            }
-            else if (double.TryParse(this.value, out dVal))
-            {
-                return dVal;
-            }
-            return this.value;
+            //int iVal;
+            //double dVal;
+            //if (int.TryParse(this.value, out iVal))
+            //{
+            //    return iVal;
+            //}
+            //else if (double.TryParse(this.value, out dVal))
+            //{
+            //    return dVal;
+            //}
+            //return this.value;
+            return CellFormat.GetFormatValue(this.cellFormatType, this.value);
+        }
+
+
+        public string CellFormatString
+        {
+            get { return cellFormatString; }
+            set { cellFormatString = value; }
+        }
+
+        public CellFormatType CellFormatType
+        {
+            get { return cellFormatType; }
+            set { cellFormatType = value; }
         }
     }
 }

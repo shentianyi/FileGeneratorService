@@ -7,6 +7,7 @@ using System.IO;
 using Brilliantech.Export.Report.XmlParser;
 using Brilliantech.Export.Report.Chart;
 using OfficeOpenXml.Drawing.Chart;
+using System.Drawing;
 
 namespace Brilliantech.Export.Report
 {
@@ -50,8 +51,7 @@ namespace Brilliantech.Export.Report
             RChart[] charts = chartXmlParser.GetCharts();
             for (int i = 0; i < charts.Length; i++)
             {
-                ExcelChart chart = null;
-                chart = worksheet.Drawings.AddChart(charts[i].Title, eChartType.ColumnStacked) as ExcelChart;
+                var chart = worksheet.Drawings.AddChart(charts[i].Title, eChartType.ColumnStacked) as ExcelChart;
                 if (!charts[i].ShowLegend)
                 {
                     chart.Legend.Remove();
@@ -68,24 +68,22 @@ namespace Brilliantech.Export.Report
                 {
                     ExcelChart chartType = chart.PlotArea.ChartTypes.Add(series[j].Type);
                     var cc = GetChartType(series[j].Type, chartType, series[j]);
-
-                    //ExcelChartSerie serie=   cc.Series.Add(
-                    //         worksheet.Cells[series[j].YStartRow, series[j].YStartCol, series[j].YEndRow, series[j].YEndCol],
-                    //         worksheet.Cells[series[j].XStartRow, series[j].XStartCol, series[j].XEndRow, series[j].XEndCol]);
                     ExcelChartSerie serie = cc.Series.Add(worksheet.Cells[series[j].YAixs], worksheet.Cells[series[j].XAixs]);
-                    // var s=GetChartSerie(series[j].Type,serie,series[j]);
-                    if (charts[i].UseSecondaryAxis)
+
+                    serie = GetChartSerie(series[j].Type, serie, series[j]);
+
+                    if (series[j].HeaderAddress != null)
                     {
-                        chart.UseSecondaryAxis = true;
+                        serie.HeaderAddress = worksheet.Cells[series[j].HeaderAddress];
                     }
-                   // string chartYAxisFormat=
-                    chart.YAxis.Format = charts[i].YAxisFormatString;
-                    //chart.YAxis.Format = "##%";
-                    // serie.HeaderAddress = worksheet.Cells["A2"];                   
+                    if (series[j].UseSecondaryAxis)
+                    { 
+                        chartType.UseSecondaryAxis = true;
+                        chartType.YAxis.Format = series[j].YAxisFormatString;
+                    }
                 }
                 chartOffsetHeight += (double)charts[i].Height.Value + 10;
-                //  chartOffsetHeight += chart.To.RowOff * defaultRowHeight/0.75+10;
-                //chart.Style = eChartStyle.Style26;
+                //  chartOffsetHeight += chart.To.RowOff * defaultRowHeight/0.75+10; 
             }
         }
 
@@ -104,7 +102,7 @@ namespace Brilliantech.Export.Report
                 var c = chart as ExcelBarChart;
                 if (serie.ShowDataLabel)
                     c.DataLabel.ShowValue = true;
-                
+
                 return c;
             }
             var cc = chart as ExcelBarChart;
@@ -119,7 +117,9 @@ namespace Brilliantech.Export.Report
                 if (rserie.ColorString != null)
                 {
                     s.LineColor = rserie.ColorString;
-                } 
+                    // not use, i cannot change the marker color!
+                    // s.Marker = eMarkerStyle.Diamond;     
+                }
                 return s;
             }
             else if (type.Equals(eChartType.ColumnStacked))

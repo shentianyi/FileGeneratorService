@@ -58,49 +58,49 @@
 					<![CDATA[Volumn]]>
 				</cell>
 				<cell>
-					<![CDATA[13.9]]>
+					<![CDATA[39%]]>
 				</cell>
 				<cell>
-					<![CDATA[1.49]]>
+					<![CDATA[49%]]>
 				</cell>
 				<cell>
-					<![CDATA[12.3]]>
+					<![CDATA[63%]]>
 				</cell>
 				<cell>
-					<![CDATA[16.9]]>
+					<![CDATA[100%]]>
 				</cell>
 				<cell>
-					<![CDATA[10]]>
+					<![CDATA[50%]]>
 				</cell>
 				<cell>
-					<![CDATA[2]]>
+					<![CDATA[20%]]>
 				</cell>
 				<cell>
-					<![CDATA[5.8]]>
+					<![CDATA[58%]]>
 				</cell>
 				<cell>
-					<![CDATA[4]]>
+					<![CDATA[40%]]>
 				</cell>
 				<cell>
-					<![CDATA[10]]>
+					<![CDATA[70%]]>
 				</cell>
 				<cell>
-					<![CDATA[11.9]]>
+					<![CDATA[19%]]>
 				</cell>
 				<cell>
-					<![CDATA[16.9]]>
+					<![CDATA[90%]]>
 				</cell>
 				<cell>
-					<![CDATA[10]]>
+					<![CDATA[30%]]>
 				</cell>
 				<cell>
-					<![CDATA[11]]>
+					<![CDATA[40%]]>
 				</cell>
 				<cell>
-					<![CDATA[7]]>
+					<![CDATA[70%]]>
 				</cell>
 				<cell>
-					<![CDATA[18]]>
+					<![CDATA[80%]]>
 				</cell>
 			</row>
 			<row>
@@ -256,60 +256,50 @@
 		</body>
 	</table>
 	<charts>
+		<chart title="DEFECT and Volumn" height="250" width="1100" show_legend="true">
+			<serie color="D1E5FE" type="line" show_data_label='true'>
+				<xaixs>
+					<![CDATA[B1:P1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B2:P2]]>
+				</yaixs>
+			</serie>
+			<serie color="D1E5FE" type="column">
+				<xaixs>
+					<![CDATA[B1:P1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B3:P3]]>
+				</yaixs>
+			</serie>
+			<serie type="line"  show_data_label='true'>
+				<xaixs>
+					<![CDATA[B1:P1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B4:P4]]>
+				</yaixs>
+			</serie>
+		</chart>
 		<chart title="DPV" height="250" width="1100">
-			<serie color="#D1E5FE" type="column">
-				<xstart_row>
-					<![CDATA[1]]>
-				</xstart_row>
-				<xstart_col>
-					<![CDATA[2]]>
-				</xstart_col>
-				<xend_row>
-					<![CDATA[1]]>
-				</xend_row>
-				<xend_col>
-					<![CDATA[16]]>
-				</xend_col>
-				<ystart_row>
-					<![CDATA[4]]>
-				</ystart_row>
-				<ystart_col>
-					<![CDATA[2]]>
-				</ystart_col>
-				<yend_row>
-					<![CDATA[4]]>
-				</yend_row>
-				<yend_col>
-					<![CDATA[16]]>
-				</yend_col>
+			<serie color="D1E5FE" type="line">
+				<xaixs>
+					<![CDATA[B1:P1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B4:P4]]>
+				</yaixs>
 			</serie>
 		</chart>
 		<chart title="SDPV" height="250" width="1100">
-			<serie color="#D1E5FE" type="line">
-				<xstart_row>
-					<![CDATA[1]]>
-				</xstart_row>
-				<xstart_col>
-					<![CDATA[2]]>
-				</xstart_col>
-				<xend_row>
-					<![CDATA[1]]>
-				</xend_row>
-				<xend_col>
-					<![CDATA[16]]>
-				</xend_col>
-				<ystart_row>
-					<![CDATA[5]]>
-				</ystart_row>
-				<ystart_col>
-					<![CDATA[2]]>
-				</ystart_col>
-				<yend_row>
-					<![CDATA[5]]>
-				</yend_row>
-				<yend_col>
-					<![CDATA[16]]>
-				</yend_col>
+			<serie color="D1E5FE" type="line">
+				<xaixs>
+					<![CDATA[B1:P1]]>
+				</xaixs>
+				<yaixs>
+					<![CDATA[B5:P5]]>
+				</yaixs>
 			</serie>
 		</chart>
 	</charts>

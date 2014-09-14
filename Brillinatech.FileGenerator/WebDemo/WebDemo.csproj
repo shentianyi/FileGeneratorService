@@ -50,10 +50,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BTChartExcelReport.htm" />
+    <Content Include="common\a.xml" />
     <Content Include="common\data.xml" />
     <Content Include="common\grid.xml" />
     <Content Include="common\gridH.xml" />
     <Content Include="common\grid_dates.xml" />
+    <Content Include="common\report_chart_meta.xml" />
+    <Content Include="common\report_with_format.xml" />
     <Content Include="dhtmlx.css" />
     <Content Include="DHXDataView.html" />
     <Content Include="DHXGrid.html" />
@@ -144,6 +148,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="BTChartExcelFormatReport.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,7 +161,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>5583</DevelopmentServerPort>
+          <DevelopmentServerPort>15080</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

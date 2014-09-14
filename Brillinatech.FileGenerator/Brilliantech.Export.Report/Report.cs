@@ -133,7 +133,7 @@ namespace Brilliantech.Export.Report
                     worksheet.Cells[rowNum, col].Style.Border.BorderAround(cells[col-1].BorderStyle,cells[col-1].BorderColor);
                     worksheet.Cells[rowNum, col].Style.Fill.PatternType = ExcelFillStyle.Solid;
                     worksheet.Cells[rowNum, col].Style.Fill.BackgroundColor.SetColor(RTCell.GetBackgroundColor(row - 1));
-
+                  //  worksheet.Cells[rowNum, col].Style.Numberformat.Format = "##.#%";
                     worksheet.Cells[rowNum, col].Style.Font.Name = "Arial";
                     worksheet.Cells[rowNum, col].Style.Font.Size = 10;
                 }

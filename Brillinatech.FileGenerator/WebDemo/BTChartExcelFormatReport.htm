@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>BT REPORT CHART EXCEL</title>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h2>BT REPORT CHART EXCEL</h2>
+		<form method="post" target="_blank" action="http://localhost:6023/BTReportService/ChartExcel">
+			<p>
+				<input type="submit" value="SUB"/>
+			</p>
+			<p>
+				<textarea  name="grid_xml" id="grid_xml"   cols="100" rows="100">H</textarea>
+			</p>
+		</form>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			var file = "common/report_with_format.xml";
+			// var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+			// xmlDoc.async = false;
+			// xmlDoc.load("common/report_chart_meta.xml");
+			// $("#grid_xml").value(xmlDoc);
+			$.get(file, function(data) {
+				console.log(data);
+				$("#grid_xml").text(data);
+			}, 'text');
+		});
+	</script>
+</html>

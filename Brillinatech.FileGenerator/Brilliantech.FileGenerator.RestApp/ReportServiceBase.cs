@@ -16,7 +16,7 @@ namespace Brilliantech.FileGenerator.RestApp
 
         public static string GetXmlString(HttpContext context)
         {
-            var xml = context.Request.Form["report_xml"];
+            var xml = context.Request.Form["grid_xml"];
             return context.Server.UrlDecode(xml);
         }
     }

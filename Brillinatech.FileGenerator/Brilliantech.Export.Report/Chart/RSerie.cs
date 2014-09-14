@@ -12,15 +12,20 @@ namespace Brilliantech.Export.Report.Chart
     {
         private eChartType type=eChartType.ColumnStacked;
         private Color color=Color.LemonChiffon;
-        private int xStartRow;
-        private int xStartCol;
-        private int xEndRow;
-        private int xEndCol;
+        private string colorString=null;
 
-        private int yStartRow;
-        private int yStartCol;
-        private int yEndRow;
-        private int yEndCol;
+        //private int xStartRow;
+        //private int xStartCol;
+        //private int xEndRow;
+        //private int xEndCol;
+
+        //private int yStartRow;
+        //private int yStartCol;
+        //private int yEndRow;
+        //private int yEndCol;
+        private string xAixs;
+        private string yAixs;
+        private bool showDataLabel = true;
 
         public RSerie() { 
          
@@ -36,18 +41,36 @@ namespace Brilliantech.Export.Report.Chart
             else if(string.Equals(_type, "line")) {
                 this.type = eChartType.Line;
             }
-            this.color = ColorTranslator.FromHtml(parent.Attributes["color"].Value);
-           // var d = parent.SelectSingleNode("xstart_row");
-         
-            this.xStartRow = int.Parse(parent.SelectSingleNode("xstart_row").FirstChild.Value);
-            this.xStartCol = int.Parse(parent.SelectSingleNode("xstart_col").FirstChild.Value);
-            this.xEndRow = int.Parse(parent.SelectSingleNode("xend_row").FirstChild.Value);
-            this.xEndCol = int.Parse(parent.SelectSingleNode("xend_col").FirstChild.Value);
+            if (((XmlElement)parent).HasAttribute("show_data_label")) {
+                this.showDataLabel = bool.Parse(parent.Attributes["show_data_label"].Value);
+            }
 
-            this.yStartRow = int.Parse(parent.SelectSingleNode("ystart_row").FirstChild.Value);
-            this.yStartCol = int.Parse(parent.SelectSingleNode("ystart_col").FirstChild.Value);
-            this.yEndRow = int.Parse(parent.SelectSingleNode("yend_row").FirstChild.Value);
-            this.yEndCol = int.Parse(parent.SelectSingleNode("yend_col").FirstChild.Value);
+            if (((XmlElement)parent).HasAttribute("color"))
+            {
+                this.colorString = parent.Attributes["color"].Value;
+                if (this.colorString.StartsWith("#"))
+                {
+                    this.color = ColorTranslator.FromHtml(parent.Attributes["color"].Value);
+                }
+                else
+                {
+                    this.color = ColorTranslator.FromHtml("#" + parent.Attributes["color"].Value);
+                }
+            }
+
+           // var d = parent.SelectSingleNode("xstart_row");
+            this.xAixs = parent.SelectSingleNode("xaixs").FirstChild.Value;
+
+            this.yAixs = parent.SelectSingleNode("yaixs").FirstChild.Value;
+            //this.xStartRow = int.Parse(parent.SelectSingleNode("xstart_row").FirstChild.Value);
+            //this.xStartCol = int.Parse(parent.SelectSingleNode("xstart_col").FirstChild.Value);
+            //this.xEndRow = int.Parse(parent.SelectSingleNode("xend_row").FirstChild.Value);
+            //this.xEndCol = int.Parse(parent.SelectSingleNode("xend_col").FirstChild.Value);
+
+            //this.yStartRow = int.Parse(parent.SelectSingleNode("ystart_row").FirstChild.Value);
+            //this.yStartCol = int.Parse(parent.SelectSingleNode("ystart_col").FirstChild.Value);
+            //this.yEndRow = int.Parse(parent.SelectSingleNode("yend_row").FirstChild.Value);
+            //this.yEndCol = int.Parse(parent.SelectSingleNode("yend_col").FirstChild.Value);
         }
         public eChartType Type
         {
@@ -59,46 +82,66 @@ namespace Brilliantech.Export.Report.Chart
             set { color = value; }
         }
 
-        public int XStartRow
+        public string ColorString
         {
-            get { return xStartRow; }
-            set { xStartRow = value; }
+            get { return colorString; }
         }
-        public int XStartCol
+        public string XAixs
         {
-            get { return xStartCol; }
-            set { xStartCol = value; }
+            get { return xAixs; }
+            set { xAixs = value; }
         }
-        public int XEndRow
+        public string YAixs
         {
-            get { return xEndRow; }
-            set { xEndRow = value; }
+            get { return yAixs; }
+            set { yAixs = value; }
         }
-        public int XEndCol
+        public bool ShowDataLabel
         {
-            get { return xEndCol; }
-            set { xEndCol = value; }
+            get { return showDataLabel; }
         }
+        //public int XStartRow
+        //{
+        //    get { return xStartRow; }
+        //    set { xStartRow = value; }
+        //}
+        //public int XStartCol
+        //{
+        //    get { return xStartCol; }
+        //    set { xStartCol = value; }
+        //}
+        //public int XEndRow
+        //{
+        //    get { return xEndRow; }
+        //    set { xEndRow = value; }
+        //}
+        //public int XEndCol
+        //{
+        //    get { return xEndCol; }
+        //    set { xEndCol = value; }
+        //}
 
-        public int YStartRow
-        {
-            get { return yStartRow; }
-            set { yStartRow = value; }
-        }
-        public int YStartCol
-        {
-            get { return yStartCol; }
-            set { yStartCol = value; }
-        }
-        public int YEndRow
-        {
-            get { return yEndRow; }
-            set { yEndRow = value; }
-        }
-        public int YEndCol
-        {
-            get { return yEndCol; }
-            set { yEndCol = value; }
-        }
+        //public int YStartRow
+        //{
+        //    get { return yStartRow; }
+        //    set { yStartRow = value; }
+        //}
+        //public int YStartCol
+        //{
+        //    get { return yStartCol; }
+        //    set { yStartCol = value; }
+        //}
+        //public int YEndRow
+        //{
+        //    get { return yEndRow; }
+        //    set { yEndRow = value; }
+        //}
+        //public int YEndCol
+        //{
+        //    get { return yEndCol; }
+        //    set { yEndCol = value; }
+        //}
+
+
     }
 }

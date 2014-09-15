@@ -8,6 +8,7 @@ using Brilliantech.Export.Report.XmlParser;
 using Brilliantech.Export.Report.Chart;
 using OfficeOpenXml.Drawing.Chart;
 using System.Drawing;
+using System.Xml;
 
 namespace Brilliantech.Export.Report
 {
@@ -84,7 +85,8 @@ namespace Brilliantech.Export.Report
                         {
                             chartType.UseSecondaryAxis = true;
                             chartType.YAxis.Format = series[j].YAxisFormatString;
-                        }
+                        } 
+                        //chartType.Grouping = eGrouping.Stacked;
                     }
                     chartOffsetHeight += (double)charts[i].Height.Value + 10;
                 }
@@ -99,7 +101,7 @@ namespace Brilliantech.Export.Report
                 var c = chart as ExcelLineChart;
                 if (serie.ShowDataLabel)
                     c.DataLabel.ShowValue = true;
-                c.DataLabel.ShowPercent = true;
+                c.DataLabel.ShowPercent = true;              
                 return c;
             }
             else if (type.Equals(eChartType.ColumnStacked))
@@ -123,18 +125,19 @@ namespace Brilliantech.Export.Report
                 {
                     if (rserie.ColorString != null)
                         s.LineColor = rserie.ColorString;
+                    
                     // not use, i cannot change the marker color!
-                    // s.Marker = eMarkerStyle.Diamond;     
+                   //  s.Marker = eMarkerStyle.Diamond;     
                 }
                 return s;
             }
-            else if (type.Equals(eChartType.ColumnStacked))
-            {
-                //var c = chart as ExcelBarChart;
-                //if (serie.ShowDataLabel)
-                //    c.DataLabel.ShowValue = true;
-                //return c;
-            } 
+            //else if (type.Equals(eChartType.ColumnStacked))
+            //{
+            //    var c = serie as ExcelChartSerie;
+            //    c.ChartColor = rserie.ColorString;
+            //    return c;
+           // } 
+           
             return serie;
         }
     }

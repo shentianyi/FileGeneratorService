@@ -24,9 +24,16 @@ namespace Brilliantech.Export.Report.Table
 
         public RTCell(XmlNode parent)
         {
-            if (parent.HasChildNodes)
-                value = parent.FirstChild.Value;
             XmlElement ele = (XmlElement)parent;
+            if (ele.HasAttribute("value"))
+            {
+                this.value = parent.Attributes["value"].Value;
+            }
+            if (parent.HasChildNodes && this.value == null)
+            {
+                value = parent.FirstChild.Value;
+            }
+           
             if (ele.HasAttribute("format")) {
                 this.cellFormatType = (CellFormatType)int.Parse(parent.Attributes["format"].Value);
                 this.cellFormatString = CellFormat.GetFormatString(this.cellFormatType);

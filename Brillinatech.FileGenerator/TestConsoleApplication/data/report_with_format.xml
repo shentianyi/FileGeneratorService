@@ -60,226 +60,226 @@
 		</head>
 		<body>
 			<row>
-				<cell  bgcolor="#7E0CF7">
+				<cell  bgcolor="#7E0CF7" value='Vehicle Total'>
 					<![CDATA[Vehicle Total]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='10'>
 					<![CDATA[10]]>
 				</cell>
-				<cell>
+				<cell value='8'>
 					<![CDATA[8]]>
 				</cell>
-				<cell>
+				<cell value='8'>
 					<![CDATA[8]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='9'>
 					<![CDATA[9]]>
 				</cell>
-				<cell>
+				<cell value='2'>
 					<![CDATA[2]]>
 				</cell>
-				<cell>
+				<cell  value='8'>
 					<![CDATA[8]]>
 				</cell>
-				<cell>
+				<cell value='12'>
 					<![CDATA[12]]>
 				</cell>
-				<cell>
+				<cell value='11'>
 					<![CDATA[11]]>
 				</cell>
-				<cell>
+				<cell value='11'>
 					<![CDATA[11]]>
 				</cell>
-				<cell>
+				<cell value='15'>
 					<![CDATA[15]]>
 				</cell>
-				<cell>
+				<cell value='10'>
 					<![CDATA[10]]>
 				</cell>
-				<cell>
+				<cell value='6'>
 					<![CDATA[6]]>
 				</cell>
-				<cell>
+				<cell value='5'>
 					<![CDATA[5]]>
 				</cell>
-				<cell>
+				<cell value='1'>
 					<![CDATA[1]]>
 				</cell>
 			</row>
 			<row>
-				<cell>
+				<cell value='NOK vehicle'>
 					<![CDATA[NOK vehicle]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='7'>
 					<![CDATA[7]]>
 				</cell>
-				<cell>
+				<cell value='8'>
 					<![CDATA[8]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='6'>
 					<![CDATA[6]]>
 				</cell>
-				<cell>
+				<cell value='11'>
 					<![CDATA[11]]>
 				</cell>
-				<cell>
+				<cell value='11'>
 					<![CDATA[11]]>
 				</cell>
-				<cell>
+				<cell value='14'>
 					<![CDATA[14]]>
 				</cell>
-				<cell>
+				<cell value='6'>
 					<![CDATA[6]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='4'>
 					<![CDATA[4]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
 			</row>
 			<row>
-				<cell>
+				<cell value='OK vehicle'>
 					<![CDATA[OK vehicle]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='10'>
 					<![CDATA[10]]>
 				</cell>
-				<cell>
+				<cell value='1'>
 					<![CDATA[1]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='9'>
 					<![CDATA[9]]>
 				</cell>
-				<cell>
+				<cell value='2'>
 					<![CDATA[2]]>
 				</cell>
-				<cell>
+				<cell value='8'>
 					<![CDATA[8]]>
 				</cell>
-				<cell>
+				<cell value='6'>
 					<![CDATA[6]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='0'>
 					<![CDATA[0]]>
 				</cell>
-				<cell>
+				<cell value='1'>
 					<![CDATA[1]]>
 				</cell>
-				<cell>
+				<cell value='4'>
 					<![CDATA[4]]>
 				</cell>
-				<cell>
+				<cell value='6'>
 					<![CDATA[6]]>
 				</cell>
-				<cell>
+				<cell value='1'>
 					<![CDATA[1]]>
 				</cell>
-				<cell>
+				<cell value='1'>
 					<![CDATA[1]]>
 				</cell>
 			</row>
 			<row>
-				<cell>
+				<cell value='FTQ'>
 					<![CDATA[FTQ]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='13%'>
 					<![CDATA[13%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='50%'>
 					<![CDATA[50%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='0%'>
 					<![CDATA[0%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='7%'>
 					<![CDATA[7%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='40%'>
 					<![CDATA[40%]]>
 				</cell>
-				<cell format="1">
+				<cell format="1" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
-				<cell format="1" bgcolor="#7E0CF7">
+				<cell format="2" bgcolor="#7E0CF7" value='22.9%'>
 					<![CDATA[20.9%]]>
 				</cell>
-				<cell format="1" bgcolor="#7E0CF7">
+				<cell format="1" bgcolor="#7E0CF7" value='100%'>
 					<![CDATA[100%]]>
 				</cell>
 			</row>

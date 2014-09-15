@@ -30,7 +30,6 @@ namespace Brilliantech.Export.Report.Enum
 
         public static object GetFormatValue(CellFormatType type, string value)
         {
-
             if (type.Equals(CellFormatType.None))
             {
                 int iVal;
@@ -43,14 +42,14 @@ namespace Brilliantech.Export.Report.Enum
                 {
                     return dVal;
                 }
-                else
-                {
-                    return value;
-                }
             }
             else if (type.Equals(CellFormatType.IntPercent) || type.Equals(CellFormatType.FloatPercent))
             {
-                return double.Parse(value.TrimEnd('%')) / 100;
+                 double d=0;
+                 if (double.TryParse(value.TrimEnd('%'), out d))
+                 {
+                     return d / 100;
+                 }
             }
             return value;
         }

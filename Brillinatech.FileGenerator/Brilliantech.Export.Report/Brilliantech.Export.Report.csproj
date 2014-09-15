@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chart\RChart.cs" />
+    <Compile Include="Chart\RChartType.cs" />
     <Compile Include="Chart\RSerie.cs" />
     <Compile Include="Enum\CellFormat.cs" />
     <Compile Include="Enum\ChartAxisFormat.cs" />

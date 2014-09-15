@@ -12,11 +12,12 @@ namespace Brilliantech.Export.Report.Table
     public class RTCell
     {
         private string value = "";
-        private Color backgroundColor = ColorTranslator.FromHtml("#E3EFFF");
+
         private ExcelBorderStyle borderStyle = ExcelBorderStyle.Thin;
         private Color borderColor = ColorTranslator.FromHtml("#A4BED4");
         private string cellFormatString = null;
         private CellFormatType cellFormatType = CellFormatType.None;
+        private Color backgroundColor;
 
         public RTCell() { }
 
@@ -28,6 +29,10 @@ namespace Brilliantech.Export.Report.Table
             if (ele.HasAttribute("format")) {
                 this.cellFormatType = (CellFormatType)int.Parse(parent.Attributes["format"].Value);
                 this.cellFormatString = CellFormat.GetFormatString(this.cellFormatType);
+            }
+            if (ele.HasAttribute("bgcolor"))
+            {
+                this.backgroundColor = ColorTranslator.FromHtml(parent.Attributes["bgcolor"].Value);
             }
         }
 
@@ -54,8 +59,10 @@ namespace Brilliantech.Export.Report.Table
             set { borderColor = value; }
         }
 
-        public static Color GetBackgroundColor(int row)
+        public Color GetBackgroundColor(int row)
         {
+            if (this.backgroundColor != null)
+                return this.backgroundColor;
             return row % 2 == 0 ? ColorTranslator.FromHtml("#FFFFFF") : ColorTranslator.FromHtml("#E3EFFF");
         }
 

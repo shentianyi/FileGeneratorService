@@ -66,7 +66,7 @@ namespace Brilliantech.Export.Report
                 RSerie[] series = charts[i].Series;
                 for (var j = 0; j < series.Length; j++)
                 {
-                    ExcelChart chartType = chart.PlotArea.ChartTypes.Add(series[j].Type);
+                    ExcelChart chartType = chart.PlotArea.ChartTypes.Add(series[j].Type);                   
                     var cc = GetChartType(series[j].Type, chartType, series[j]);
                     ExcelChartSerie serie = cc.Series.Add(worksheet.Cells[series[j].YAixs], worksheet.Cells[series[j].XAixs]);
 

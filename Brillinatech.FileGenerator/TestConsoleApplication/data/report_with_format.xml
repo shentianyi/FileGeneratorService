@@ -276,10 +276,10 @@
         <cell format="1">
           <![CDATA[100%]]>
         </cell>
-        <cell format="1">
+        <cell format="1" bgcolor="7E0CF7">
           <![CDATA[20.9%]]>
         </cell>
-        <cell format="1">
+        <cell format="1" bgcolor="F70C3F">
           <![CDATA[100%]]>
         </cell>
       </row>

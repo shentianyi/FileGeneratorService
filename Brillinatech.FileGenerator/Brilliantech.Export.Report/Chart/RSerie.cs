@@ -52,7 +52,8 @@ namespace Brilliantech.Export.Report.Chart
 
             if (ele.HasAttribute("color"))
             {
-                this.colorString = parent.Attributes["color"].Value;
+                this.colorString = parent.Attributes["color"].Value.TrimStart('#');
+               
                 if (this.colorString.StartsWith("#"))
                 {
                     this.color = ColorTranslator.FromHtml(parent.Attributes["color"].Value);

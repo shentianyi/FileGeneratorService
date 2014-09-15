@@ -56,8 +56,16 @@
     <Content Include="common\grid.xml" />
     <Content Include="common\gridH.xml" />
     <Content Include="common\grid_dates.xml" />
-    <Content Include="common\report_chart_meta.xml" />
-    <Content Include="common\report_with_format.xml" />
+    <Content Include="common\report_chart_meta.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="common\report_meta.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="common\report_with_format.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="dhtmlx.css" />
     <Content Include="DHXDataView.html" />
     <Content Include="DHXGrid.html" />

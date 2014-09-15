@@ -18,6 +18,7 @@ namespace Brilliantech.Export.Report.Table
         private string cellFormatString = null;
         private CellFormatType cellFormatType = CellFormatType.None;
         private Color backgroundColor;
+        private string backgroundColorString;
 
         public RTCell() { }
 
@@ -32,7 +33,14 @@ namespace Brilliantech.Export.Report.Table
             }
             if (ele.HasAttribute("bgcolor"))
             {
-                this.backgroundColor = ColorTranslator.FromHtml(parent.Attributes["bgcolor"].Value);
+                try
+                {
+                    this.backgroundColorString = parent.Attributes["bgcolor"].Value.TrimStart('#');
+                    this.backgroundColor = ColorTranslator.FromHtml("#" + this.backgroundColorString);
+                }
+                catch {
+                    this.backgroundColorString = null;
+                }
             }
         }
 
@@ -61,7 +69,7 @@ namespace Brilliantech.Export.Report.Table
 
         public Color GetBackgroundColor(int row)
         {
-            if (this.backgroundColor != null)
+            if (this.backgroundColorString != null)
                 return this.backgroundColor;
             return row % 2 == 0 ? ColorTranslator.FromHtml("#FFFFFF") : ColorTranslator.FromHtml("#E3EFFF");
         }

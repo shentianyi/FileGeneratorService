@@ -11,7 +11,7 @@ namespace Brilliantech.Export.Report.Chart
 {
     public class RSerie
     {
-        private eChartType type=eChartType.ColumnStacked;
+      //  private eChartType type=eChartType.ColumnStacked;
         private Color color=Color.LemonChiffon;
         private string colorString=null;
 
@@ -35,16 +35,15 @@ namespace Brilliantech.Export.Report.Chart
          
         }
 
-        public RSerie(XmlNode parent) { 
-            
-            string _type = parent.Attributes["type"].Value;
-            if (string.Equals(_type, "column"))
-            {
-                this.type = eChartType.ColumnStacked;
-            }
-            else if(string.Equals(_type, "line")) {
-                this.type = eChartType.Line;
-            }
+        public RSerie(XmlNode parent) {            
+             //string _type = parent.Attributes["type"].Value;
+            //if (string.Equals(_type, "column"))
+            //{
+            //    this.type = eChartType.ColumnStacked;
+            //}
+            //else if(string.Equals(_type, "line")) {
+            //    this.type = eChartType.Line;
+            //}
             XmlElement ele=(XmlElement)parent;
             if (ele.HasAttribute("show_data_label")) {
                 this.showDataLabel = bool.Parse(parent.Attributes["show_data_label"].Value);
@@ -52,15 +51,13 @@ namespace Brilliantech.Export.Report.Chart
 
             if (ele.HasAttribute("color"))
             {
-                this.colorString = parent.Attributes["color"].Value.TrimStart('#');
-               
-                if (this.colorString.StartsWith("#"))
+                try
                 {
-                    this.color = ColorTranslator.FromHtml(parent.Attributes["color"].Value);
+                    this.colorString = parent.Attributes["color"].Value.TrimStart('#');
+                    this.color = ColorTranslator.FromHtml("#" + this.colorString);
                 }
-                else
-                {
-                    this.color = ColorTranslator.FromHtml("#" + parent.Attributes["color"].Value);
+                catch {
+                    this.colorString = null;
                 }
             }
 
@@ -80,10 +77,10 @@ namespace Brilliantech.Export.Report.Chart
                 this.headerAddress = parent.Attributes["header_address"].Value;
             }
         }
-        public eChartType Type
-        {
-            get { return type; }
-        }
+        //public eChartType Type
+        //{
+        //    get { return type; }
+        //}
         public Color Color
         {
             get { return color; }

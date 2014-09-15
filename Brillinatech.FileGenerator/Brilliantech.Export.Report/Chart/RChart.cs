@@ -15,7 +15,8 @@ namespace Brilliantech.Export.Report.Chart
         private int? width;
         private bool showLegend = false;
 
-        private RSerie[] series;
+        //private RSerie[] series;
+        private RChartType[] chartTypes;
 
         public RChart() { }
 
@@ -37,16 +38,22 @@ namespace Brilliantech.Export.Report.Chart
                 showLegend = bool.Parse(parent.Attributes["show_legend"].Value);
             }
 
-            XmlNodeList nodes = ((XmlElement)parent).GetElementsByTagName("serie");
-            if (nodes != null && nodes.Count > 0)
-            {
-                this.series = new RSerie[nodes.Count];
-                for (int i = 0; i < nodes.Count; i++)
-                {
-                    series[i] = new RSerie(nodes[i]);
+            //XmlNodeList nodes = ((XmlElement)parent).GetElementsByTagName("serie");
+            //if (nodes != null && nodes.Count > 0)
+            //{
+            //    this.series = new RSerie[nodes.Count];
+            //    for (int i = 0; i < nodes.Count; i++)
+            //    {
+            //        series[i] = new RSerie(nodes[i]);
+            //    }
+            //}
+            XmlNodeList nodes = ele.GetElementsByTagName("chart_type");
+            if (nodes != null && nodes.Count > 0) {
+                this.chartTypes = new RChartType[nodes.Count];
+                for (int i = 0; i < nodes.Count; i++) {
+                    this.chartTypes[i] = new RChartType(nodes[i]);
                 }
             }
-          
         }
 
         public string Title
@@ -61,14 +68,19 @@ namespace Brilliantech.Export.Report.Chart
         {
             get { return width; } 
         }
-        public RSerie[] Series
-        {
-            get { return series; } 
-        }
+        //public RSerie[] Series
+        //{
+        //    get { return series; } 
+        //}
         public bool ShowLegend
         {
             get { return showLegend; }
         }
-       
+
+        public RChartType[] ChartTypes
+        {
+            get { return chartTypes; }
+        }
+
     }
 }

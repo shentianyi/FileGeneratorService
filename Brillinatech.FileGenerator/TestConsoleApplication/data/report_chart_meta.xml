@@ -58,49 +58,49 @@
 					<![CDATA[Volumn]]>
 				</cell>
 				<cell>
-					<![CDATA[39%]]>
+					<![CDATA[39]]>
 				</cell>
 				<cell>
-					<![CDATA[49%]]>
+					<![CDATA[49]]>
 				</cell>
 				<cell>
-					<![CDATA[63%]]>
+					<![CDATA[63]]>
 				</cell>
 				<cell>
-					<![CDATA[100%]]>
+					<![CDATA[100]]>
 				</cell>
 				<cell>
-					<![CDATA[50%]]>
+					<![CDATA[50]]>
 				</cell>
 				<cell>
-					<![CDATA[20%]]>
+					<![CDATA[20]]>
 				</cell>
 				<cell>
-					<![CDATA[58%]]>
+					<![CDATA[58]]>
 				</cell>
 				<cell>
-					<![CDATA[40%]]>
+					<![CDATA[40]]>
 				</cell>
 				<cell>
-					<![CDATA[70%]]>
+					<![CDATA[70]]>
 				</cell>
 				<cell>
-					<![CDATA[19%]]>
+					<![CDATA[19]]>
 				</cell>
 				<cell>
-					<![CDATA[90%]]>
+					<![CDATA[90]]>
 				</cell>
 				<cell>
-					<![CDATA[30%]]>
+					<![CDATA[30]]>
 				</cell>
 				<cell>
-					<![CDATA[40%]]>
+					<![CDATA[40]]>
 				</cell>
 				<cell>
-					<![CDATA[70%]]>
+					<![CDATA[70]]>
 				</cell>
 				<cell>
-					<![CDATA[80%]]>
+					<![CDATA[80]]>
 				</cell>
 			</row>
 			<row>
@@ -257,50 +257,58 @@
 	</table>
 	<charts>
 		<chart title="DEFECT and Volumn" height="250" width="1100" show_legend="true">
-			<serie color="D1E5FE" type="line" show_data_label='true'>
-				<xaixs>
-					<![CDATA[B1:P1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B2:P2]]>
-				</yaixs>
-			</serie>
-			<serie color="D1E5FE" type="column">
-				<xaixs>
-					<![CDATA[B1:P1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B3:P3]]>
-				</yaixs>
-			</serie>
-			<serie type="line"  show_data_label='true'>
-				<xaixs>
-					<![CDATA[B1:P1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B4:P4]]>
-				</yaixs>
-			</serie>
+			<chart_type type="line">
+				<serie color="D1E5FE" type="line" show_data_label='true'>
+					<xaixs>
+						<![CDATA[B1:P1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B2:P2]]>
+					</yaixs>
+				</serie>
+			</chart_type>
+			<chart_type type="column">
+				<serie color="D1E5FE">
+					<xaixs>
+						<![CDATA[B1:P1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B3:P3]]>
+					</yaixs>
+				</serie>
+				<serie  show_data_label='true'>
+					<xaixs>
+						<![CDATA[B1:P1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B4:P4]]>
+					</yaixs>
+				</serie>
+			</chart_type>
 		</chart>
 		<chart title="DPV" height="250" width="1100">
-			<serie color="D1E5FE" type="line">
-				<xaixs>
-					<![CDATA[B1:P1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B4:P4]]>
-				</yaixs>
-			</serie>
+			<chart_type type="line">
+				<serie color="D1E5FE">
+					<xaixs>
+						<![CDATA[B1:P1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B4:P4]]>
+					</yaixs>
+				</serie>
+			</chart_type>
 		</chart>
 		<chart title="SDPV" height="250" width="1100">
-			<serie color="D1E5FE" type="line">
-				<xaixs>
-					<![CDATA[B1:P1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B5:P5]]>
-				</yaixs>
-			</serie>
+			<chart_type type="line">
+				<serie color="D1E5FE">
+					<xaixs>
+						<![CDATA[B1:P1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B5:P5]]>
+					</yaixs>
+				</serie>
+			</chart_type>
 		</chart>
 	</charts>
 </report>

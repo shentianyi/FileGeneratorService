@@ -277,7 +277,7 @@
 					<![CDATA[100%]]>
 				</cell>
 				<cell format="1">
-					<![CDATA[20%]]>
+					<![CDATA[20.9%]]>
 				</cell>
 				<cell format="1">
 					<![CDATA[100%]]>
@@ -287,30 +287,34 @@
 	</table>
 	<charts>
 		<chart title="Quality Buyoff station Vehicle status" height="300" width="1150"  show_legend="true">
-				<serie color="#D1E5FE" type="column"  header_address="A3">
-				<xaixs>
-					<![CDATA[B1:R1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B3:R3]]>
-				</yaixs>
-			</serie>
-			<serie color="#D1E5FE" type="column"  header_address="A4">
-				<xaixs>
-					<![CDATA[B1:R1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B4:R4]]>
-				</yaixs>
-			</serie>
-			<serie color="#D1E5FE" type="line" use_secondary_axis="true" yaxis_format_type="1" header_address="A5">
-				<xaixs>
-					<![CDATA[B1:R1]]>
-				</xaixs>
-				<yaixs>
-					<![CDATA[B5:R5]]>
-				</yaixs>
-			</serie>
+			<chart_type  type="column">
+				<serie color="D1E5FE" header_address="A3">
+					<xaixs>
+						<![CDATA[B1:R1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B3:R3]]>
+					</yaixs>
+				</serie>
+				<serie color="D1E5FE" header_address="A4">
+					<xaixs>
+						<![CDATA[B1:R1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B4:R4]]>
+					</yaixs>
+				</serie>
+			</chart_type>
+			<chart_type type="line">
+				<serie color="B439E9" use_secondary_axis="true" yaxis_format_type="1" header_address="A5">
+					<xaixs>
+						<![CDATA[B1:R1]]>
+					</xaixs>
+					<yaixs>
+						<![CDATA[B5:R5]]>
+					</yaixs>
+				</serie>
+			</chart_type>
 		</chart>
 	</charts>
 </report>

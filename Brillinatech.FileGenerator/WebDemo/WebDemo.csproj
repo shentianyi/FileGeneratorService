@@ -58,6 +58,7 @@
     <Content Include="common\grid_dates.xml" />
     <Content Include="common\report_chart_meta.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="common\report_meta.xml">
       <SubType>Designer</SubType>
@@ -66,6 +67,7 @@
     <Content Include="common\report_with_format.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="common\test.xml" />
     <Content Include="dhtmlx.css" />
     <Content Include="DHXDataView.html" />
     <Content Include="DHXGrid.html" />

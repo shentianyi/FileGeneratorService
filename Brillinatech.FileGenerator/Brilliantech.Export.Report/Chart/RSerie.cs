@@ -51,14 +51,13 @@ namespace Brilliantech.Export.Report.Chart
 
             if (ele.HasAttribute("color"))
             {
-                this.colorString = parent.Attributes["color"].Value;
-                if (this.colorString.StartsWith("#"))
+                try
                 {
-                    this.color = ColorTranslator.FromHtml(parent.Attributes["color"].Value);
+                    this.colorString = parent.Attributes["color"].Value.TrimStart('#');
+                    this.color = ColorTranslator.FromHtml("#" + this.colorString);
                 }
-                else
-                {
-                    this.color = ColorTranslator.FromHtml("#" + parent.Attributes["color"].Value);
+                catch {
+                    this.colorString = null;
                 }
             }
 

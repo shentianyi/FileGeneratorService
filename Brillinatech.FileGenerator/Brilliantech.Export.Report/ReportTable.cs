@@ -16,7 +16,7 @@ namespace Brilliantech.Export.Report
             this.fileInfo = new FileInfo(filePath);
             this.xml = xml;
             tableXmlParser = new TableXmlParser(xml);
-            this.colCount = tableXmlParser.GetColCount();
+           // this.colCount = tableXmlParser.GetColCount();
         }
 
         public void Generate()

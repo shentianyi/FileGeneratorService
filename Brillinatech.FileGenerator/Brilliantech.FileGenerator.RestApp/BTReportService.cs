@@ -20,5 +20,10 @@ namespace Brilliantech.FileGenerator.RestApp
         {
             new ReportExporter(HttpContext.Current, ReportDefaultPath(), GetXmlString(HttpContext.Current)).ProcessExportTableChartRequest();
         }
+        [WebInvoke(Method = "POST", UriTemplate = "Excel")]
+        public void GenerateExcel()
+        {
+            new ReportExporter(HttpContext.Current, ReportDefaultPath(), GetXmlString(HttpContext.Current)).ProcessExportTableRequest();
+        }
     }
 }

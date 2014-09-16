@@ -69,6 +69,7 @@
     </Content>
     <Content Include="data\report_with_format.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="data\test.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

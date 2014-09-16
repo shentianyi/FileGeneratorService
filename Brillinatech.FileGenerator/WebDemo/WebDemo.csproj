@@ -66,6 +66,7 @@
     </Content>
     <Content Include="common\report_with_format.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="common\test.xml" />
     <Content Include="dhtmlx.css" />

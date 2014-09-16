@@ -26,6 +26,12 @@ namespace Brilliantech.Export.Report
             report.Generate();
             ResponseReport();
         }
+        public void ProcessExportTableRequest()
+        {
+            IReport report = new ReportTable(filePath, xml);
+            report.Generate();
+            ResponseReport();
+        }
 
         private void ResponseReport()
         {
